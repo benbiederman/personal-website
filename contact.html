@@ -46,10 +46,10 @@
             <menu>
             <div class="nav-list">
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="goals.html">Goals</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li id="highlight"><a href="resume.html">Resume</a></li>
+                    <li id="highlight"><a href="/docs/Ben-Biederman-Resume.pdf" target="_blank">Download CV</a></li>
                    
 
             </div>
@@ -68,13 +68,25 @@
 
         </div>
 
+        <main id="contact">
+            <form class="contact-form" action="/php/contactform.php" method="post">
+                <input type="text" name="name" class="form" placeholder="*Name" required>
+                <input type="text" name="mail" class="form" placeholder="*E-mail" required>
+                <input type="text" name="subject" class="form" placeholder="*Subject" required>
+                <textarea name="message" placeholder="*Message" class="form" required></textarea>
+                <button type="submit" name="submit">Send message</button>
+                
+            </form>
+        </main>
+
+
         
 
         
         <script src="js/apps.js"></script>
 
         <footer>
-            <div class="socials"
+            <div class="socials">
             <figure>
                 <a href="https://www.linkedin.com/in/ben-biederman/" target="_blank"><img src="img/icons/linkedin.png" alt="LinkedIn logo"></a>
             </figure>
