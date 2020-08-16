@@ -1,6 +1,6 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: "Roboto", "Helvetica", sans-serif;
     color: #111;
 }
@@ -9,106 +9,111 @@ body {
     background-color: #fcfcfc;
 }
 
-/* Mobile */
-@media only screen and (min-width: 100px) {
+    /* Mobile Section*/
+@media only screen and (min-width: 100px) { 
 
     /* Navigation Menu */
     header {
         display: flex;
-        width: 100%;
-        height: 8vh;
-        justify-content: space-around;
         flex-direction: row;
         align-items: center;
-        position: sticky;
+        justify-content: space-evenly;
+        width: 100%;
+        min-height: 8vh;
         top: 0;
+        left: 0;
+        position: sticky;
         transition: all 0.5s ease;
-        background-color: rgba(0, 0, 0, .1);
-        z-index: 9;
-      
     }
-
-    
 
     .sticky {
-        background-color: #111
-        
+        transition: all 0.5s ease;
+        background-color: #111;        
     }
 
-    header h1 a{
+    header h1 a {
+        font-family: 'Bebas neue', 'Roboto', sans-serif;
         color: #fcfcfc;
-        font-weight: 500;
-        font-size: 30px;
-        text-transform: uppercase;
-        font-family: "Bebas Neue", "Roboto", sans-serif;
-        letter-spacing: 3px; 
         text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 35px;
+        font-weight: 500;
     }
 
     .nav-list {
-        position: absolute;
+        width: 100vw;
+        height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        top: 8vh;
-        left: 0;
-        width: 100%;
-        height: 88vh;
-        background-color: rgba(43, 43, 43, .95);
         align-items: center;
-        transform: translateX(-100%);
-        transition: all 0.5s ease-in;
-        z-index: 10;
+        position: absolute;
+        justify-content: center;
+        top: 0vh;
+        left: 0;
+        visibility: hidden;
+        z-index: 5;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s ease;
+        background-color: #111;
+    }
+
+    .nav-active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .nav-list ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 90%;
+        height: 70vh;
     }
 
     .nav-list li {
-        list-style: none;
         opacity: 0;
-        font-size: 22px;
-        font-weight: 500;
+        list-style: none;
+        font-size: 25px;
         text-transform: uppercase;
-        letter-spacing: 1px;
     }
 
     .nav-list a {
         color: #fcfcfc;
         text-decoration: none;
-        
+        display: block;
+        padding: 10px 20px;
     }
 
     .nav-list a:hover {
-        color:#029199;
-        transition: all 0.5s ease;
+        color: #029199;
     }
 
     #highlight {
-        border: 2px solid#029199;
-        padding: 0;
+        border: 2px solid #029199;
         border-radius: 25px;
+        
     }
-
 
     #highlight a {
-        display: block; 
-        padding: 10px 35px;
-        color: #fcfcfc;
+        display: block;
     }
 
-    #hightlight:hover {
-        background-color:#029199;
-        transition: all 0.5s ease;
-               
+    #highlight:hover {
+        background-color: #029199;
+
     }
 
     #highlight a:hover {
-        background-color:#029199;
-        transition: all 0.3s ease;
-        border-radius: 25px;
-        
+        color: #fcfcfc;
+
     }
 
     .burger {
         cursor: pointer;
+        z-index: 10;
+        position: sticky;
     }
 
     .burger div {  
@@ -119,24 +124,21 @@ body {
         transition: all 0.5s ease;
     }
 
-    .nav-active {
-        transform: translateX(0%);
-    }
-
     @keyframes navListFade {
         from {
             opacity: 0;
-            transform: translateX(-50px);
+            transform: translatey(-50px);
         }
         to {
             opacity: 1;
-            transform: translateX(0);
+            transform: translatey(0);
         }
     }
 
     .toggle .burger1 {
         transform: rotate(45deg) translate(5px, 6px);
         transition: all 0.5s ease;
+        background-color: #992a02;
     }
 
     .toggle .burger2 {
@@ -146,663 +148,252 @@ body {
     .toggle .burger3 {
         transform: rotate(-45deg) translate(5px, -6px);
         transition: all 0.5s ease;
+        background-color: #992a02;
     }
-    
+
     /* Landing Page */
     .landing-page {
-        background-image: url(/img/ben-biederman.jpg);
-        background-position: bottom;
-        background-size: cover;
-        position: static;
+        height: 95vh;
         width: 100%;
-        min-height: 95vh;
         margin-top: -8vh;
+        z-index: 1;
+        background-position: center;
+        background-size: cover;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+        text-align: center;
+    }
+
+    .home-page {
+        background-image: url(/img/ben-biederman.jpg);
+    }
+
+    .landing-page h4 {
+        font-size: 20px;
+        color: #fcfcfc;
+        font-weight: 500;
+        text-shadow: 2px 2px 10px #111;
+        margin-top: 10vh;
+    }
+
+    .landing-page h2 {
+        font-family: 'Bebas neue', 'Roboto', sans-serif;
+        color: #fcfcfc;
+        font-size: 50px;
+        letter-spacing: 3px;
+        font-weight: 500;
+        text-shadow: 2px 2px 10px #111;
     }
 
     .cta {
-        width: 90%;
-    }
-
-    .cta h4 {
-        margin-top: 17vh;
-        font-size: 20px;
-        color: #fcfcfc;
-        text-align: center;
-        font-weight: 300;
-        text-shadow: 2px 2px 5px #111;
-  
-    }
-
-    .cta h2 {
-        font-size: 50px;
-        letter-spacing: 3px;
-        color: #fcfcfc;
-        text-align: center;
-        font-weight: 500;
-        font-family: "Bebas Neue", "Roboto", sans-serif;
-        text-shadow: 2px 2px 15px #111;
-    }
-
-    .button-1 {
         background-color: #029199;
         border-radius: 25px;
-        margin: 0 auto;
-        width: 75%;
-        height: 60px;
-        margin-top: 3vh;
-        text-align: center;
-        
-    }
-
-    .button-1 a {
-        color: #fcfcfc;
-        text-decoration: none;
-        font-size: 20px;
-        text-transform: uppercase;
-        text-shadow: 2px 2px 8px #595959;
-    }
-
-    .button-1:hover {
-        background-color: rgba(2, 145, 153, .8)
-    }
-
-    .button-1 p {
-        padding-top: 18px;
-        padding-bottom: 18px;
-        color: #fcfcfc;
-    }
-
-    .landing {
-        width: 100%;
-        min-height: 30vh;
-        background-color: #111;
-        margin-top: -8vh;
         display: flex;
         align-items: center;
         justify-content: center;
-
-        
+        margin-top: 2.5vh;
+        box-shadow: 2px 2px 20px #111;
     }
 
-    .landing h3 {
-        font-family: "Bebas Neue", "Roboto", sans-serif;
-        font-size: 50px;
+    .cta a {
+        display: block;
+        text-decoration: none;
+        padding: 1.5vh 20vw;
+    }
+
+    .cta p {
+        font-size: 25px;
         color: #fcfcfc;
-        margin-top: 6vh;
-        letter-spacing: 3px;
-    
+        text-transform: uppercase;
     }
 
-    /* About Section */
-    .about {
-        min-height: 60vh;
+    .cta:hover {
+        background-color: hsla(183.2, 97.4%, 30.4%, 0.9);
+    }
+
+    /* /Landing Page  */
+    /* Index content */
+
+    .background {
+        min-height: 50vh;
         width: 100%;
         text-align: center;
-        background-size: cover;
-        background-position: center;
+        padding: 4vh 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-content: center;
+        opacity: 1;
+        margin-top: 0;
+        transition: all 1.0s ease;
     }
 
-    .about h3 {
-        text-align: center;
+    .background-shift {
+        opacity: 0;
+        margin-top: 15vh;
+        transition: all 1.0s ease;
+    }
+
+    .background h3 {
         font-size: 35px;
         text-transform: uppercase;
-        padding-top: 3vh;
     }
 
     .about-info {
-        width: 95%;
         display: flex;
-        flex-direction: row;
+        flex-direction: row; 
+        align-content: center;
+        justify-content: space-around;
         flex-wrap: wrap;
-        justify-content: space-evenly;
-        margin-top: 3vh;
     }
 
     .about-info div {
-        width: 45%;
+        width: 40%;
     }
 
     .about-info img {
-        width: 100px;
+        width: 120px;
     }
 
     .about-info p {
-        font-size: 20px;
-        margin-top: -25px;
-        padding: 0 10px 50px 10px;
-        font-weight: 300;
+        margin-top: -30px;
     }
 
-    /* About Ben */
-    .about-ben {
-        min-height: 80vh;
-        margin-top: -8vh;
-        padding-bottom: 5vh;
-    }
-
-    #about-section {
-        background-color: #fcfcfc;
-    }
-
-    .about-ben img {
-        height: 60vh;
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
-        background-color: #101010;
-
-    }
-
-    .about-ben h3 {
-        text-align: center;
-        font-size: 35px;
-        text-transform: uppercase;
-        padding-top: 3vh;
-    }
-
-    .about-ben p {
-        font-size: 20px;
-        padding: 20px;
-        font-weight: 300;
-    }
-
-    .about-ben a {
-        text-decoration: none;
-        font-weight: 500;
-        
-    }
-
-    .about-ben a:hover {
-        color: #029199;
-    }
-
-    .coffee {
-        min-height: 20vh;
-        width: 100%;
-        background-color: #111;
-    }
-
-    .coffee h3 {
-        text-align: center;
-        font-size: 30px;
-        text-transform: uppercase;
-        padding-top: 3vh;
-        color: #fcfcfc;
-    }
-
-    .coffee-brands {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-evenly;
-        text-align: center;
-        padding-bottom: 3vh;
-    }
-
-    .coffee-brands img {
-        width: 60%;
-        margin-top: 3vh;
-
-    }
-
-    /* Contact */
-    main {
-        min-height: 50vh;
-        text-align: center;
-    }
-
-    .thank-you {
-        min-height: 50vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .thank-you h3 {
-        font-size: 50px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-family: "Bebas Neue", "Roboto", sans-serif;
-    }
-
-    .thank-you p {
-        font-size: 25px;
-        padding: 0 25px;
-        font-weight: 300;
-    }
-
-    
-
-
-   form {
-       width: 100%;
-       text-align: center;
-       margin-top: 3vh;
-   }
-
-   form input {
-       width: 90%;
-       min-height: 5vh;
-       font-size: 20px;
-       margin: 10px 0;
-       border: 1px solid #c9c9c9;
-       box-shadow: 1px 1px 5px #c9c9c9;
-   }
-
-   .form {
-       padding-left: 10px;
-   }
-
-    textarea {
-       width: 90%;
-       min-height: 25vh;
-       font-size: 20px;
-       margin: 10px 0;
-       border: 1px solid #c9c9c9;
-       box-shadow: 1px 1px 5px #c9c9c9;
-   }
-
-   button {
-       min-height: 6vh;
-       width: 60%;
-       font-size: 20px;
-       margin: 3vh auto;
-       border-radius: 25px;
-       background-color: #029199;
-       color: white;
-       border: #029199;
-       display: block;
-
-   }
-
-   button:hover {
-        background-color: rgba(2, 145, 153, .8);
-   }
-    
-
-    /* Footer */
+    /* /Index Content */
+    /* footer Section */
     footer {
-        min-height: 20vh;
-        width: 100%;
         background-color: #111;
+        min-height: 15vh;
+        width: 100%;
+        padding: 2vh 0;
         text-align: center;
-    }
-
-    footer p {
-        font-size: 20px;
-        font-weight: 300;
-        padding-bottom: 3vh;
-    }
-
-    footer p a {
-        color: #fcfcfc;
-        text-decoration: none;
-    }
-
-    .socials {
-        display: flex;
-        justify-content: center;
-        padding: 4vh 0;
     }
 
     .socials img {
         width: 50px;
-        padding: 0 10px;
-    }
-
-    .socials img:hover {
-        width: 50px;
         transition: all 0.5s ease;
     }
 
+    .socials img:hover {
+        transform: scale(1.1);
+        transition: all 0.5s ease;
+    }
 
+    footer p {
+        margin: 5vh 0 0 0;
+    }
 
-
-
-
-
-}
-
-/* Tablet */
-@media only screen and (min-width: 768px) {
-
-/* Landing Page */
-.cta h4 {
-    font-size: 30px;
-}
-
-.cta h2 {
-    font-size: 70px;
-}
-
-.button-1 {
-    width: 50%;
-    height: 60px;     
-}
-
-.button-1 a {
-    font-size: 25px;
-}
-
-.button-1 p {
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-.landing {
-    min-height: 30vh;
-        
-}
-
-.landing h3 {
-    font-size: 60px;
-    color: #fcfcfc;
-    margin-top: 5vh;
-    letter-spacing: 5px;
-    
-}
-
-    /* Contact */
-form {
-    width: 100%;
-    text-align: center;
-    margin-top: 3vh;
-}
-
-form input {
-    width: 90%;
-    min-height: 5vh;
-    font-size: 20px;
-    margin: 10px 0;
-    border: 1px solid #c9c9c9;
-    box-shadow: 1px 1px 5px #c9c9c9;
-}
-
-.form {
-    padding-left: 10px;
-}
-
-textarea {
-    width: 90%;
-    min-height: 25vh;
-    font-size: 20px;
-    margin: 10px 0;
-    border: 1px solid #c9c9c9;
-    box-shadow: 1px 1px 5px #c9c9c9;
-}
-
-button {
-    min-height: 6vh;
-    width: 60%;
-    font-size: 20px;
-    margin: 3vh 0;
-    border-radius: 25px;
-    background-color: #029199;
-    color: white;
-    border: #029199;
+    footer a {
+        color: #fcfcfc;
+        font-size: 18px;
+        text-decoration: none;
+    }
+    /* /footer section */
 
 }
+ /* /Mobile Section */
 
-/* About Ben */
-.about-ben {
-    background-color: #101010;
-    padding-bottom: 0;
-}
+/* Tablet Section*/
+@media only screen and (min-width: 768px) { 
 
-#about-section {
-    padding-bottom: 3vh;
-}
+    /* Landing Page */
+    .cta a {
+        padding: 1.5vh 8vw;
+    }
 
-.about-paragraph {
-    width: 70%;
-    margin: 0 auto;
-}
+    /* /Landing Page */
 
-.about-ben img {
-    height: 60vh;
-    width: 80%;
-    background-color: #101010;
-    margin-bottom: -4px;
+    /* Index content */
+
+    .background {
+        min-height: 35vh;
+    }
+
+    /* /Index Content */
 
 }
+ /* /Tablet Section */
 
-.about-ben h3 {
-    font-size: 40px;
-}
-
-
-.about-ben a {
-    text-decoration: none;
-    font-weight: 500;
-    
-}
-
-.coffee {
-    min-height: 15vh;
-}
-
-.coffee-brands {
-    width: 80%;
-    margin: 0 auto;
-}
-
-.coffee-brands img {
-    width: 40%;
-    margin-top: 4vh;
-
-}
-   
-
-/* Contact */ 
-form input {
-    width: 70%;
-}
-  
-textarea {
-    width: 70%;
-}
- 
-button {
-    width: 40%;
-
-}
-
-}
-
-/* Desktop */
-@media only screen and (min-width: 1025px) {
+ /* Desktop Section*/
+@media only screen and (min-width: 1024px) { 
+    .burger {
+        display: none;
+    }
 
     /* Navigation Menu */
-.burger {
-    display: none;
-}
-
-menu {
-    width: 45%;
-    margin-right: -5%;
-}
-
-.nav-list {
-    position: static;
-    flex-direction: row;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 8vh;
-    background-color: transparent;
-    transform: translateX(0%);
-    transition: none;
-}
-
-.nav-list li {
-    opacity: 1;
-    font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 0px;
-}
-
-.nav-list a {
-    color: #fcfcfc;
-    text-decoration: none;
+    header {
+        justify-content: space-around;
+        align-items: center;
+     }
     
-}
+    .nav-list {
+        width: 110%;
+        height: 8vh;
+        flex-direction: row;
+        position: static;
+        visibility: visible;
+        opacity: 1;
+        background-color: transparent;
+    }
 
-#highlight a {
-    padding: 10px 40px;
-}
+    .nav-list ul {
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 8vh;
+        text-align: center;
+    }
 
-.landing-page {
-    background-position: center;
-}
+    .nav-list li {
+        opacity: 1;
+        font-size: 16px;
+    }
 
-/* Landing Page */
-.cta h4 {
-    font-size: 20px;
-    margin-top: 15vh;
-}
+    .nav-list a {
+        color: #fcfcfc;
+        padding: 7px 20px;
+    }
 
-.cta h2 {
-    font-size: 60px;
-}
+    /* /Navigation Menu */
 
-.button-1 {
-    width: 20%;
-    height: 50px;     
-}
+    /* Landing Page */
+     .cta a {
+        padding: 1.5vh 5vw;
+    }
 
-.button-1 a {
-    font-size:20px;
-}
+    .cta p {
+        font-size: 20px;
+    }
 
-.button-1 p {
-    padding-top: 13px;
-    padding-bottom: 13px;
-}
+    /* /Landing Page */
+    /* Index content */
 
-/* About Section */
-.about {
-    min-height: 50vh;
-}
-
-.about h3 {
-    font-size: 35px;
-}
-
-.about-info {
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: 0 auto;
-    margin-top: 7vh;
-}
-
-.about-info div {
-    width: 20%;
-}
-
-.about-info img {
-    width: 100px;
-}
-
-.about-info p {
-    font-size: 20px;
-    margin-top: -25px;
-    padding: 0 10px 40px 10px;
-    font-weight: 300;
-}
-
-/* About Ben */
-
-.about-ben img {
-    height: 70vh;
-    width: 30%;
-    background-color: #101010;
-    
-}
-
-.about-ben h3 {
-    font-size: 30px;
-}
-
-.about-paragraph {
-    width: 60%;
-}
-
-.about-ben p {
-    font-size: 16px
-}
-
-.coffee {
-    min-height: 10vh;
-}
-
-.coffee h3 {
-    font-size: 25px;
-}
-
-.coffee-brands {
-    width: 30%;
-    margin: 0 auto;
-}
-
-.coffee-brands img {
-    width: 50%;
-    margin-top: 4vh;
-
-}
-
-.coffee-brands img:hover {
-    width: 55%;
-    transition: all 0.5s ease;
-}
-
-/* Contact */ 
-form input {
-    width: 50%;
-}
-
- textarea {
-    width: 50%;
-}
-
-button {
-    width: 20%;
-    margin: 3vh auto;
-
-}
-
-.thank-you {
-    min-height: 60vh;
-}
-
-.thank-you h3 {
-        font-size: 50px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-family: "Bebas Neue", "Roboto", sans-serif;
+    .background {
+        min-height: 40vh;
         
+    }
+
+    .about-info {
+        width: 80%;
+        margin: 4vh auto;
+    }
+
+    .about-info div {
+        width: 20%;
+    }
+
+    /* /Index Content */
+
+    /* footer Section */
+    .socials img {
+        width: 35px;
+        margin: 0 .3vw;
+    }
+
+    /* /footer section */
+
+
 }
-
-.thank-you p {
-    font-size: 20px;
-}
-
-
-/* Footer */
-
-footer p {
-    font-size: 16px;
-}
-
-
-.socials img {
-    width: 40px;
-}
-
-
-}
+ /* /Desktop Section */

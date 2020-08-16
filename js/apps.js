@@ -25,9 +25,22 @@ navSlide();
 const navSticky = () => {
     const header = document.querySelector('.header');
 
+    //Sticky Nav on scroll
     window.addEventListener('scroll', () => {
       header.classList.toggle('sticky', window.scrollY > 0);  
     })
 }
 
 navSticky();
+
+const backgroundSlide = () => {
+    const background = document.querySelector('.background-shift');
+
+    //Background info slide up
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 120){
+            background.className = 'background';
+        }
+    })
+}
+backgroundSlide();

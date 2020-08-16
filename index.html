@@ -10,7 +10,7 @@
         
             <meta charset="utf-8">
             <!--Website description -->
-            <meta name="description" content="The official website of Ben Biederman - that seems redundant, I can't imagine any unofficial ones exist..." />
+            <meta name="description" content="The official portfolio of Ben Biederman - that seems quite redundant, I can't imagine any other ones exist..." />
         
             <!-- Photo shown when shared -->
             <meta property="og:image" content="#" />
@@ -41,41 +41,44 @@
     </head>
 
     <body>
-        <header class="header">
-            <h1><a href="index.html">Ben Biederman</a></h1>
-            <menu>
+    <!-- Navigation Menu -->
+
+    <header class="header">
+        <h1><a href="index.html">Ben Biederman</a></h1>
+        <menu>
             <div class="nav-list">
+                <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
                     <li id="highlight"><a href="/docs/Ben-Biederman-Resume.pdf" target="_blank">Download CV</a></li>
-                   
-
+                </ul>
             </div>
+
             <div class="burger">
                 <div class="burger1"></div>
                 <div class="burger2"></div>
                 <div class="burger3"></div>
             </div>
-            </menu>
+        </menu>
+    </header>
 
-        </header>
+    <!-- /Navigation Menu -->
+    
+    <main>
+        <!-- Landing Page -->
+        <section class="landing-page home-page">
+            <h4>Leader. Web Developer. Coffee Addict.</h4>
+            <h2>Ben Biederman</h2>
+            <div class="cta"><a href="contact.html">
+                <p>Let's Talk</p>
+            </a></div>
+        </section>
+        <!-- /Landing Page -->
 
-        <div class="landing-page">
-            <div class="cta">
-                <h4>Leader. Web Developer. Coffee Addict.</h4>
-                <h2>Ben Biederman</h2>
-
-                <div class="button-1"><a href="#">
-                    <p>See My Portfolio</p>
-                </a></div>
-            </div>
-        </div>
-
-        <section class="about">
+        <!-- Background Section -->
+        <section class="background-shift">
             <h3>My <span style="color: #029199">Background</span></h3>
-
             <div class="about-info">
                 <div>
                     <figure>
@@ -104,27 +107,21 @@
                     </figure>
                     <p>Associate's Degree in Marketing Management</p>
                 </div>
-
             </div> 
-
         </section>
+        <!-- /Background Section -->
 
-        
-        <script src="js/apps.js"></script>
-
-        <footer>
-            <div class="socials">
-            <figure>
-                <a href="https://www.linkedin.com/in/ben-biederman/" target="_blank"><img src="img/icons/linkedin.png" alt="LinkedIn logo"></a>
-            </figure>
-
-            <figure>
-                <a href="#"><img src="img/icons/github.png" alt="Github logo"></a>
-            </figure>
-            </div>
-
-            <p><a href="#">&copy; 2020 Ben Biederman</a></p>
-            
-        </footer>
+    </main>
+        <!-- Footer -->
+    <footer>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/ben-biederman/" target="_blank"><img src="img/icons/linkedin.png" alt="LinkedIn icon"></a>
+            <a href="https://github.com/benbiederman" target="_blank"><img src="img/icons/github-2.png" alt="Github icon"></a>
+            <a href="mailto:hello@benbiederman.com" target="_blank"><img src="img/icons/email.png" alt="Email icon"></a>
+        </div>
+        <p><a href="index.html">Ben Biederman &copy; 2020</a></p>
+    </footer>
+        <!-- /Footer -->
+    <script src="js/apps.js"></script>
     </body>
 </html>
