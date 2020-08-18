@@ -12,6 +12,12 @@ body {
     /* Mobile Section*/
 @media only screen and (min-width: 100px) { 
 
+    
+    .h3 {
+        font-size: 35px;
+        text-transform: uppercase;  
+    }
+
     /* Navigation Menu */
     header {
         display: flex;
@@ -170,6 +176,19 @@ body {
         background-image: url(/img/ben-biederman.jpg);
     }
 
+    #page-header {
+        background-color: #111;
+        height: 30vh;
+    }
+
+    #page-header h2 {
+        margin-top: 8vh;
+    }
+
+    .content {
+        min-height: 70vh;
+    }
+
     .landing-page h4 {
         font-size: 20px;
         color: #fcfcfc;
@@ -236,11 +255,6 @@ body {
         transition: all 1.0s ease;
     }
 
-    .background h3 {
-        font-size: 35px;
-        text-transform: uppercase;
-    }
-
     .about-info {
         display: flex;
         flex-direction: row; 
@@ -262,6 +276,94 @@ body {
     }
 
     /* /Index Content */
+
+    /* About Content */
+    .about-ben {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        min-height: 80vh;
+        justify-content: center;
+        padding: 2vh 0;
+        align-items: center;
+    }
+
+    .about-ben div {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .about-ben img {
+        width: 100%;
+        padding-bottom: 2vh;
+    }
+    
+    .about-ben-info {
+        padding-top: 15vh;
+        opacity: 0;
+        transition: all 1s ease;
+    }
+
+    .about-ben-slide {
+        padding-top: 0vh;
+        opacity: 1;
+        transition: all 1s ease;
+    }
+
+    .about-ben p {
+        margin: 2vh 0;
+        font-size: 18px;
+    }
+
+    .about-ben a:hover {
+        color: #029199;
+    }
+
+    .coffee {
+        width: 100%;
+        min-height: 20vh;
+        text-align: center;
+        background-color: #111;
+        padding: 2vh 0;
+    }
+
+    .coffee h3 {
+        color: #fcfcfc;
+        font-family: 'Bebas neue', 'Roboto', sans-serif;
+        letter-spacing: 1px;
+        padding: 0 2vw;
+    }
+
+    .coffee-brands {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+        margin: 2vh auto 0 auto;
+        transition: all 0.5s ease;
+    }
+
+    .coffee-brands img {
+        width: 70px;
+        padding: 2vh;
+    }
+
+    .coffee-brands img:hover {
+        transform: scale(1.1);
+        transition: all 0.5s ease;
+    }
+
+    .line-1 {
+        height: 2px;
+        width: 40%;
+        background-color: #595959;
+        margin: 4vh auto 2vh auto;
+        
+    }
+
+    /* /About Content */
     /* footer Section */
     footer {
         background-color: #111;
@@ -277,7 +379,7 @@ body {
     }
 
     .socials img:hover {
-        transform: scale(1.1);
+        transform: scale(1.2);
         transition: all 0.5s ease;
     }
 
@@ -310,8 +412,22 @@ body {
     .background {
         min-height: 35vh;
     }
-
     /* /Index Content */
+    /* About Content */
+    .about-ben {
+        flex-direction: row;
+        min-height: 50vh;
+    }
+
+    .about-ben div {
+        width: 45%;
+    }
+
+    .line-1 {
+        width: 30%;
+    }
+
+    /* /About Content */
 
 }
  /* /Tablet Section */
@@ -367,6 +483,10 @@ body {
         font-size: 20px;
     }
 
+    #page-header h2 {
+        font-size: 60px;
+    }
+
     /* /Landing Page */
     /* Index content */
 
@@ -385,11 +505,48 @@ body {
     }
 
     /* /Index Content */
+    /* About content */
+    .about-ben {
+        text-align: center;
+        min-height: 40vh;
+        justify-content: center;
+        padding: 2vh 0;
+        align-items: center;
+    }
+
+    .about-ben div {
+        width: 40%;
+    }
+
+    .about-ben-info {
+        padding-right: 5%;
+    }
+
+    .about-ben-slide {
+        padding-right: 5%;
+
+    }
+
+    .about-ben img {
+        width: 80%;
+    }
+
+    .line-1 {
+        width: 15%;
+    }
+
+    
+    
+    /* /About Content */
 
     /* footer Section */
     .socials img {
         width: 35px;
         margin: 0 .3vw;
+    }
+
+    footer a {
+        font-size: 16px;
     }
 
     /* /footer section */

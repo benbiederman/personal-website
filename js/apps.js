@@ -44,3 +44,14 @@ const backgroundSlide = () => {
     })
 }
 backgroundSlide();
+
+const delay = () => {
+    const aboutBen = document.querySelector('.about-ben-info');
+
+    if(aboutBen){
+        aboutBen.className = 'about-ben-slide';
+    }
+}
+
+setTimeout(delay, 500);
+
