@@ -1,3 +1,5 @@
+
+// Navigation 
 const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-list');
@@ -33,6 +35,10 @@ const navSticky = () => {
 
 navSticky();
 
+// /Navigation
+
+
+
 const backgroundSlide = () => {
     const background = document.querySelector('.background-shift');
 
@@ -48,10 +54,13 @@ backgroundSlide();
 const delay = () => {
     const aboutBen = document.querySelector('.about-ben-info');
 
-    if(aboutBen){
+
+    if(true){
         aboutBen.className = 'about-ben-slide';
     }
 }
 
 setTimeout(delay, 500);
+
+
 

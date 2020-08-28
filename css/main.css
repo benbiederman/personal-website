@@ -3,10 +3,12 @@
     padding: 0;
     font-family: "Roboto", "Helvetica", sans-serif;
     color: #111;
+    
 }
 
 body {
     background-color: #fcfcfc;
+    overflow-x: hidden;
 }
 
     /* Mobile Section*/
@@ -30,6 +32,7 @@ body {
         left: 0;
         position: sticky;
         transition: all 0.5s ease;
+        z-index: 1000;
     }
 
     .sticky {
@@ -251,7 +254,7 @@ body {
 
     .background-shift {
         opacity: 0;
-        margin-top: 15vh;
+        margin-top: 10vh;
         transition: all 1.0s ease;
     }
 
@@ -277,7 +280,7 @@ body {
 
     /* /Index Content */
 
-    /* About Content */
+    /* About Section */
     .about-ben {
         display: flex;
         flex-direction: column;
@@ -300,7 +303,7 @@ body {
     }
     
     .about-ben-info {
-        padding-top: 15vh;
+        padding-top: 10vh;
         opacity: 0;
         transition: all 1s ease;
     }
@@ -363,7 +366,128 @@ body {
         
     }
 
-    /* /About Content */
+    /* /About Section */
+
+    /* Portfolio Section */
+    .portfolio {
+        min-height: 55vh;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .portfolio a {
+        text-decoration: none;
+    }
+
+    .portfolio-example {
+        background-position: center;
+        background-size: cover;
+        height: 25vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        opacity: 0;
+        
+    }
+
+    .portfolio-example h2 {
+        font-family: 'Bebas neue', 'Roboto', sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        font-size: 40px;
+        opacity: 0;
+        color: #fcfcfc;
+        text-shadow: 2px 2px 12px #111;;
+    }
+
+    .portfolio-example:hover h2 {
+        transform: scale(1.1);
+        transition: all 0.5s ease;
+        color: #029199;
+    }
+
+    #web-dev {
+        background-image: url(/img/portfolio/web-dev.jpg);
+    }
+
+    #photography {
+        background-image: url(/img/portfolio/photography.jpg);
+    }
+
+    #side-projects {
+        background-image: url(/img/portfolio/side-projects.jpg);
+    }
+
+    @keyframes fade {
+        from {
+            opacity: 0;
+            visibility: hidden;
+            transition: visibility 0s, opacity 0.5s ease;
+        }
+        to {
+            opacity: 1;
+            visibility: visible;
+            transition: visibility 0s, opacity 0.5s ease;
+
+        }
+    }
+
+    /* /Portfolio Section */
+
+    /* Side Project Section */
+    .side-project {
+        width: 100%;
+        text-align: center;
+        padding: 2vh 0;
+    }
+
+    .side-project img {
+        width: 90%;
+        box-shadow: 2px 2px 10px #c9c9c9;
+        margin: 2vh 0;
+    }
+
+    .side-project h3 {
+        font-size: 30px;
+        padding: 2vh 4vh;
+        font-weight: 500;
+        font-family: 'Bebas neue', 'Roboto', sans-serif;
+    }
+
+    .tgbg a {
+        font-size: 50px;
+        font-family: 'Bebas neue', 'Roboto', sans-serif;
+        display: block;
+        color: #3bb57b;
+        text-decoration: none;
+    }
+
+    .side-project a {
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .wrapper a:hover {
+        color: #029199;
+    }
+
+    figcaption {
+        margin-top: -10px;
+        padding: 0 4vh;
+    }
+
+    .side-project p {
+        padding: 4vh 4vh;
+        text-align: left;
+    }
+
+
+
+    /* /Side Project Section */
     /* footer Section */
     footer {
         background-color: #111;
@@ -428,6 +552,54 @@ body {
     }
 
     /* /About Content */
+
+    /* Portfolio Content */
+    .portfolio {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .portfolio-example {
+        width: 100vw;
+        height: 25vh;
+
+    }
+
+    .portfolio-example h2 {
+        letter-spacing: 2px;
+    }
+
+    /* /Portfolio Content */
+
+    /* Side Project Section */
+    .side-project img {
+        width: 80%;
+    }
+
+    .wrapper {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .side-project h3 {
+        font-size: 40px;
+        padding: 1vh 10vh;
+    }
+
+    .tgbg a {
+        font-size: 40px;
+        display: inline-block;
+    }
+
+    figcaption {
+        margin-top: -10px;
+        padding: 0 10vh;
+    }
+
+    .side-project p {
+        padding: 4vh 0vh;
+    }
+
+    /* /Side Project Section */
 
 }
  /* /Tablet Section */
@@ -534,10 +706,61 @@ body {
     .line-1 {
         width: 15%;
     }
-
-    
     
     /* /About Content */
+
+
+
+     /* Portfolio Content */
+     .portfolio {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .portfolio-example {
+        width: 32.965vw;
+        height: 65vh;
+
+    }
+
+    .portfolio-example h2 {
+        letter-spacing: 2px;
+        padding: 0 0vh;
+    }
+
+    /* /Portfolio Content */
+
+
+    /* Side Project Section */
+    .side-project img {
+        width: 60%;
+    }
+
+    .side-project h3 {
+        font-size: 40px;
+        padding: 1vh 10vh;
+    }
+
+    .wrapper {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .tgbg a {
+        font-size: 40px;
+        display: inline-block;
+    }
+
+    figcaption {
+        margin-top: -10px;
+        padding: 0 25vh;
+    }
+
+    .side-project p {
+        padding: 4vh 0vh;
+    }
+
+    /* /Side Project Section */
+
 
     /* footer Section */
     .socials img {
