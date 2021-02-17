@@ -1,66 +1,44 @@
 
-// Navigation 
-const navSlide = () => {
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-list');
-    const navList = document.querySelectorAll('.nav-list li');
 
-    burger.addEventListener('click', () => {
-        //Toggle Nav
-        nav.classList.toggle('nav-active');
-
-        //Animate Links
-     navList.forEach((link, index) => {
-        if(link.style.animation) {
-            link.style.animation = '';
-        }else {
-            link.style.animation = `navListFade 0.5s ease forwards ${index / 7 + 0.5}s`;
-         }
-        });
-        //Burger animiation
-  burger.classList.toggle('toggle');
-    });
-}
-
-navSlide();
-
-const navSticky = () => {
+function navigation() {
     const header = document.querySelector('.header');
+    const menuBtn = document.querySelector('menu');
+    const navList = document.querySelector('.nav-list');
+    const navListLinks = document.querySelectorAll('.nav-list li');
 
-    //Sticky Nav on scroll
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('sticky', window.scrollY > 0);  
-    })
-}
+    menuBtn.addEventListener('click', () => {
+        navList.classList.toggle('nav-list-active');
+        
 
-navSticky();
+        if(navList.classList.contains('nav-list-active')){
+            header.style.backgroundColor = '#111';
+            menuBtn.classList.add('menu-active');
 
-// /Navigation
-
-
-
-const backgroundSlide = () => {
-    const background = document.querySelector('.background-shift');
-
-    //Background info slide up
-    window.addEventListener('scroll', () => {
-        if(window.scrollY > 120){
-            background.className = 'background';
+        } else {
+            menuBtn.classList.remove('menu-active');
+            if(window.scrollY == 0){
+                header.style.backgroundColor = 'transparent';
+            }
         }
+
+        navListLinks.forEach((link, index) => {
+            if(link.style.animation) {
+                link.style.animation = '';
+            } else {
+                link.style.animation = `linkSlide 0.5s ease forwards ${index / 7 + 0.5}s`;
+            }
+        })
     })
+
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 0) {
+            header.style.backgroundColor = '#111';
+        } else {
+            header.style.backgroundColor = 'transparent';
+        }
+
+    })
+
 }
-backgroundSlide();
 
-const delay = () => {
-    const aboutBen = document.querySelector('.about-ben-info');
-
-
-    if(true){
-        aboutBen.className = 'about-ben-slide';
-    }
-}
-
-setTimeout(delay, 500);
-
-
-
+navigation();

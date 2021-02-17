@@ -1,127 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <head>
-            <title>Ben Biederman</title>
+    <!-- CSS -->
+    <link href="/css/main.css" type="text/css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <title>Ben Biederman</title>
+
+    <!--Webpage description -->
+    <meta name="description" content="The official portfolio of Ben Biederman - that seems quite redundant, I can't imagine any other ones exist..." />
         
-            <link href="/css/main.css" type="text/css" rel="stylesheet">
-        
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-            <meta charset="utf-8">
-            <!--Website description -->
-            <meta name="description" content="The official portfolio of Ben Biederman - that seems quite redundant, I can't imagine any other ones exist..." />
-        
-            <!-- Photo shown when shared -->
-            <meta property="og:image" content="#" />
-        
-            <!-- Favicon -->
-            <link rel="icon" href="favicon.ico" type="image/x-icon" />
-            <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
-        
-            <!-- Font -->
-            <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
-
-            <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-
-            <!-- Google Analytics-->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72469480-1"></script>
-            <script>
-                window.dataLayer = window.dataLayer || [];
-
-                function gtag() {
-                    dataLayer.push(arguments);
-                }
-                gtag('js', new Date());
-
-                gtag('config', 'UA-72469480-1');
-
-                </script>
-        
-    </head>
-
-    <body>
-    <!-- Navigation Menu -->
-
-    <header class="header">
+    <!-- Link Thumbnail -->
+    <meta property="og:image" content="#" />
+</head>
+<header class="header flex-row">
+    <div class="branding flex-row">
         <h1><a href="index.html">Ben Biederman</a></h1>
-        <menu>
-            <div class="nav-list">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li id="highlight"><a href="/docs/Ben-Biederman-Resume.pdf" target="_blank">Download CV</a></li>
-                </ul>
-            </div>
-
-            <div class="burger">
-                <div class="burger1"></div>
-                <div class="burger2"></div>
-                <div class="burger3"></div>
-            </div>
-        </menu>
-    </header>
-
-    <!-- /Navigation Menu -->
-    
-    <main>
-        <!-- Landing Page -->
-        <section class="landing-page home-page">
-            <h4>Leader. Web Developer. Coffee Addict.</h4>
-            <h2>Ben Biederman</h2>
-            <div class="cta"><a href="mailto:hello@benbiederman.com" target="_blank">
-                <p>Let's Talk</p>
-            </a></div>
-        </section>
-        <!-- /Landing Page -->
-
-        <!-- Background Section -->
-        <section class="background-shift">
-            <h3 class="h3">My <span style="color: #029199">Background</span></h3>
-            <div class="about-info">
-                <div>
-                    <figure>
-                        <img src="img/icons/10+.png" alt="10+">
-                    </figure>
-                    <p>years of customer service experience</p>
-                </div>
-
-                <div>
-                    <figure>
-                        <img src="img/icons/5+.png" alt="5+">
-                    </figure>
-                    <p>years of business management experience</p>
-                </div>
-
-                <div>
-                    <figure>
-                        <img src="/img/icons/2+.png" alt="2+">
-                    </figure>
-                    <p>years working with HTML, CSS, and JavaScript</p>
-                </div>
-
-                <div>
-                    <figure>
-                        <img src="img/icons/education.png" alt="education icon">
-                    </figure>
-                    <p>Associate's Degree in Marketing Management</p>
-                </div>
-            </div> 
-        </section>
-        <!-- /Background Section -->
-
-    </main>
-        <!-- Footer -->
-    <footer>
-        <div class="socials">
-            <a href="https://www.linkedin.com/in/ben-biederman/" target="_blank"><img src="img/icons/linkedin.png" alt="LinkedIn icon"></a>
-            <a href="https://github.com/benbiederman" target="_blank"><img src="img/icons/github-2.png" alt="Github icon"></a>
-            <a href="mailto:hello@benbiederman.com" target="_blank"><img src="img/icons/email.png" alt="Email icon"></a>
+    </div>
+    <menu>
+        <div class="nav-list">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/portfolio.html">Resume</a></li>
+                <li class="focus"><a href="/portfolio.html">Portfolio</a></li>
+            </ul>
         </div>
-        <p><a href="index.html">Ben Biederman &copy; 2020</a></p>
-    </footer>
-        <!-- /Footer -->
-    <script src="js/apps.js"></script>
-    </body>
+
+        <div class="burger">
+            <div class="burger-1"></div>
+            <div class="burger-2"></div>
+            <div class="burger-3"></div>
+        </div>
+    </menu>
+</header>
+<!-- Landing Page -->
+<section class="section index-landing-page flex-column">
+    <p>Leader. Web Developer. Coffee Addict.</p>
+    <h2>Ben Biederman</h2>
+
+    <button class="btn-primary landing-btn">
+        View my work
+    </button>
+</section>
+
+<section class="section">
+    
+</section>
+
+<section class="section">
+    
+</section>
+
+
+<script src="/js/apps.js"></script>
+<body>
+    
+</body>
 </html>
