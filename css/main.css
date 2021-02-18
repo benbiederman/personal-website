@@ -7,7 +7,6 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: "Bebas Neue", "Helvetica", sans-serif;
     font-weight: 300;
-    letter-spacing: 2px;
 }
 
 p {
@@ -60,13 +59,17 @@ p {
         width: 100%;
         min-height: 8vh;
         background-color: none;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
         position: sticky;
         top: 0;
         left: 0;
         z-index: 100;
         transition: all 0.5s ease;
+    }
+
+    .header-default {
+        background-color: #111;
     }
 
     .branding a {
@@ -76,6 +79,7 @@ p {
 
     .branding h1 {
         font-size: 2em;
+        letter-spacing: 2px;
     }
 
     .burger-1, .burger-2, .burger-3 {
@@ -179,7 +183,7 @@ p {
 
     /*   Landing Page - Index - Mobile     */
     .index-landing-page {
-        background: url(/img/ben-biederman-a.jpg) center/cover no-repeat;
+        background: url(/img/ben-biederman.jpg) center/cover no-repeat;
         margin-top: -8vh;
         height: 100vh;
         justify-content: center;
@@ -208,7 +212,69 @@ p {
         box-shadow: 0px 0px 8px #111;
     }
 
+    /*   About Ben - Index - Mobile     */
+    .about-section {
+        width: 90%;
+        margin: 2rem auto;
+        text-align: center;
+    }
 
+    .about-img img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .about-bio {
+        margin: 1rem auto;
+        width: 90%;
+    }
+
+    .about-bio h3 {
+        font-size: 2.5em;
+        margin-top: 2rem;
+    }
+
+    .about-bio p {
+        text-align: left;
+        margin-top: 1rem;
+    }
+
+
+    .blue {
+        background-color: #95B0B2;
+    }
+
+    /*   Footer - Mobile     */
+    footer {
+        width: 100%;
+        min-height: 20vh;
+        background-color: #111;
+        padding: 2em 0 1em 0;
+        color: #fcfcfc;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    .socials {
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .socials a {
+        width: 12.5%;
+        margin: 0 .2em;
+        transition: all 0.5s ease;
+    }
+
+    .socials a:hover {
+        transform: scale(1.1);
+    }
+
+    .socials img {
+        width: 100%;
+    }
 
 }
 
@@ -216,7 +282,7 @@ p {
 
 @media only screen and (min-width: 768px) {
     p {
-        line-height: 1;
+        line-height: 1.5;
     }
 
     .btn-primary {
@@ -291,8 +357,35 @@ p {
         box-shadow: 0px 0px 8px #111;
     }
 
-    
+    /*   About Ben - Index - Tablet     */
+    .about-section {
+        width: 95%;
+        min-height: 45vh;
+        display: flex;
+        justify-content: space-around;
+    }
 
+    .about-img, .about-bio {
+        width: 45%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-bio h3 {
+        margin-top: 0;
+    }
+    
+    /*   Footer - Tablet     */
+    footer {
+        min-height: 15vh;
+    }
+
+    .socials a {
+        width: 7.5%;
+    }
 
 }
 
@@ -301,6 +394,10 @@ p {
 
 @media only screen and (min-width: 1024px) and (orientation: landscape) {
     
+    p {
+        line-height: 1.25;
+    }
+
     .btn-primary {
         font-size: 2em;
         min-width: 20%;
@@ -323,6 +420,33 @@ p {
     .nav-list a {
         padding: .2em .75em;
     }
+
+    /*   About Ben - Index - Desktop     */
+    .about-section {
+        width: 70%;
+        min-height: 40vh;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .about-img, .about-bio {
+        width: 45%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /*   Footer - Desktop     */
+    footer {
+        min-height: 20vh;
+    }
+
+    .socials a {
+        width: 3%;
+    }
+
     
 
     

@@ -1,8 +1,6 @@
-
-
 function navigation() {
     const header = document.querySelector('.header');
-    const menuBtn = document.querySelector('menu');
+    const menuBtn = document.querySelector('.burger');
     const navList = document.querySelector('.nav-list');
     const navListLinks = document.querySelectorAll('.nav-list li');
 
@@ -42,3 +40,18 @@ function navigation() {
 }
 
 navigation();
+
+footer();
+
+function footer(){
+    let year = new Date().getFullYear();
+    let footer = document.querySelector('footer');
+
+    let footerP = document.createElement('p');
+    footerP.innerHTML = `&copy ${year} Ben Biederman`;
+    footer.appendChild(footerP);
+}
+
+
+
+
