@@ -1,3 +1,6 @@
+navigation();
+footer();
+
 function navigation() {
     const header = document.querySelector('.header');
     const menuBtn = document.querySelector('.burger');
@@ -9,13 +12,13 @@ function navigation() {
         
 
         if(navList.classList.contains('nav-list-active')){
-            header.style.backgroundColor = '#111';
+            header.classList.add('header-active')
             menuBtn.classList.add('menu-active');
 
         } else {
             menuBtn.classList.remove('menu-active');
             if(window.scrollY == 0){
-                header.style.backgroundColor = 'transparent';
+                header.classList.remove('header-active')
             }
         }
 
@@ -30,18 +33,14 @@ function navigation() {
 
     window.addEventListener('scroll', () => {
         if(window.scrollY > 0) {
-            header.style.backgroundColor = '#111';
+            header.classList.add('header-active');
         } else {
-            header.style.backgroundColor = 'transparent';
+            header.classList.remove('header-active');
         }
 
     })
 
 }
-
-navigation();
-
-footer();
 
 function footer(){
     let year = new Date().getFullYear();

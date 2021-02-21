@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+
+
+    <title>Howler Coffee Co. | Green Bay, WI</title>
+
+    <!-- Link Thumbnail -->
+    <meta property="og:image" content="#"/>
+    
+    <!--Website description -->
+    <meta name="description" content="#" />
+
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <div class="menu-btn">
+                <div class="burger-1"></div>
+                <div class="burger-2"></div>
+                <div class="burger-3"></div>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="img/logo.png" alt="Howler Coffee Co. Logo">
+        </div>
+        <div class="nav-list">
+            <menu class="nav-section">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#contact">Contact</a></li>    
+            </menu>       
+        </div>
+        <div class="shopping-cart">
+            <img src="img/shopping-cart.png" alt="Shopping cart icon">
+            <div class="item-counter">
+                
+            </div>
+        </div>
+        <div class="shopping-cart-list">
+            <div class="items"></div>
+                <div class="empty">
+                    <p>Your cart is empty.</p>
+                </div>
+
+            <button class="btn-primary btn-cart">
+               Checkout
+            </button>
+        </div>
+    </header>
+
+    <!--        Landing Page        -->
+    <section class="section landing-page">
+        <div class="container">
+            <h2>Freshly Roasted Coffee</h2>
+            <p>Roasted to order - delivered to your door.</p>
+
+            <button class="btn-primary btn-landing-page" onclick="location.href='#shop'">
+                Shop
+            </button>
+        </div>
+    </section>
+
+    <!--        About Us Section      -->
+    <a class="anchor" id="about"></a>
+    <section class="section about-section">
+        
+        <div class="container">
+            <div class="about-img">
+                <img src="img/about-us.jpg" alt="Coffee roasters inspecting coffee after roasting">
+            </div>
+            <div class="about-bio">
+                <h3>About Us</h3>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <a class="anchor" id="shop"></a>
+    <section class="section shop-section">
+        
+        <section class="shop-header">
+            <h3>How it works</h3>
+            <div class = "container">
+                <div>
+                    <img src="img/icon/purchase.png" alt="purchase icon">
+                    <p>Browse our catelog of roast options. Find the perfect coffee for you and make your purchase</p>
+                </div>
+
+                <div>
+                    <img src="img/icon/roast.png" alt="roast icon">
+                    <p>Once the order is received, we'll roast your coffee - fresh to order.</p>
+                </div>
+
+                <div>
+                    <img src="img/icon/ship.png" alt="deliver icon">
+                    <p>When your coffee has finished roasting, we'll deliver it to you. All local orders are delivered straight to your door - free.</p>
+                </div>
+            </div>
+        </section>
+        <section class="shop-body">
+            
+
+        </section>
+    </section>
+
+    <a class="anchor" id="contact"></a>
+    <section class="section contact-section">
+        <h3>Let's Talk</h3>
+        <form class="contact-form" action="/php/contactform.php" method="post">
+            <input type="text" name="name" class="form" placeholder="*Name" required>
+            <input type="text" name="mail" class="form" placeholder="*E-mail" required>
+            <input type="text" name="subject" class="form" placeholder="*Subject" required>
+            <textarea name="message" placeholder="*Message" class="form" required></textarea>
+            <button class="btn-primary btn-contact" type="submit" name="submit">Send message</button>
+            
+        </form>
+    </section>
+    <footer>
+        <h3>Follow us</h3>
+        <section class="socials">
+            <a href="https://www.facebook.com/HowlerCoffeeCo" target="_blank"><img src="img/socials/facebook.png" alt="Facebook icon"></a>
+            <a href="https://www.instagram.com/howlercoffeeco/" target="_blank"><img src="img/socials/instagram.png" alt="Instagram icon"></a>
+        </section>
+
+        <p>&copy; 2021 Howler Coffee Co</p>
+
+
+
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

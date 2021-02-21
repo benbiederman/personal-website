@@ -1,0 +1,922 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: #050505;
+    transition: all 0.5s ease;  
+}
+
+a:hover {
+    color: #F55700;  
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -8vh;
+    visibility: hidden;
+}
+
+::-moz-selection {
+    background-color: transparent;
+}
+
+::selection {
+    background-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Anton", "Helvetica", sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 1.25em;
+}
+
+.btn-primary {
+    min-width: 60%;
+    min-height: 5vh;
+    background-color: #F55700;
+    color: #fcfcfc;
+    font-size: 1.5rem;
+    border: none;
+    font-family: "Anton", "Helvetica", sans-serif;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 0 .5rem;
+    letter-spacing: 1px;
+    outline: none;
+    box-shadow: inset 0px 0px 10px #8a3000;
+    
+}
+
+.btn-primary:hover {
+    background-color: #f55600d5;
+    color: #fcfcfc;
+}
+
+.section {
+    min-height: 90vh;
+}
+
+@media only screen and (min-width: 100px) {
+
+    /****** Navigation   -   Mobile ******/
+    header {
+        width: 100vw;
+        min-height: 8vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #050505;
+        z-index: 10;
+    }
+
+    .menu, .shopping-cart {
+        width: 25vw;
+    }
+
+    .menu-btn, .shopping-cart img {
+        cursor: pointer;
+    }
+
+    .menu, .shopping-cart, .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .burger-1, .burger-2, .burger-3 {
+        background-color: #fcfcfc;
+        width: 30px;
+        height: 2px;
+        margin: 5px;
+        border-radius: 25px;
+        transition: all 0.5s ease;
+    }
+
+    .nav-list {
+        height: 92vh;
+        width: 100vw;
+        position: absolute;
+        top: 8vh;
+        left: -100vw;
+        transition: all 0.5s ease;
+        background-color: #f0f0f0;
+    }
+
+    .nav-list-active {
+        left: 0;
+    }
+
+    .nav-section {
+        height: 60vh;
+        width: 80vw;
+        margin: 5vh auto;
+    }
+
+    .nav-section li {
+        font-family: "Anton", "Helvetica", sans-serif;
+        text-transform: uppercase;
+        list-style: none;
+        opacity: 0;
+        
+    }
+
+    .nav-section a {
+        font-size: 2em;
+        letter-spacing: 1px;
+    }
+
+    @keyframes linkSlide {
+        from {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }        
+    }
+
+    .menu-btn-active .burger-1 {
+        transform: rotate(45deg) translate(5px, 5px);
+        background-color: #F55700;
+    }
+
+    .menu-btn-active .burger-2 {
+        opacity: 0;
+    }
+
+    .menu-btn-active .burger-3 {
+        transform: rotate(-45deg) translate(5px, -5px);
+        background-color: #F55700;
+    }
+
+    .logo {
+        width: 50vw;
+    }
+    
+    .logo img, .shopping-cart img {
+        height: 7vh;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .shopping-cart {
+        position: relative;
+    }
+
+    /****** Shopping Cart   -   Mobile ******/
+
+    .item-counter {
+        min-width: 25px;
+        min-height: 25px;
+        border-radius: 50%;
+        position: absolute;
+        background-color: #F55700;
+        top: calc(50% - 20px);
+        right: calc(50% - 20px);
+        color: #fcfcfc;
+        padding: .1rem;
+        font-size: .75rem;
+        font-family: "Roboto", sans-serif;
+        display: flex; /* Change to Flex */
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .shopping-cart-list {
+        height: 80vh;
+        width: 80vw;
+        position: absolute;
+        top: 8vh;
+        right: -85vw;
+        display: flex; /* Change to Flex */
+        flex-direction: column;
+        transition: all 0.5s ease;
+        background-color: #f0f0f0;
+    }
+
+    .shopping-list-active {
+        right: 0;
+    }
+
+    .btn-cart {
+        width: 100%;
+        height: 7.5vh;
+        border-radius: 0px;
+        
+    }
+
+    .items {
+        flex: 1;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        
+    }
+
+    .empty {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item {
+        width: 95%;
+        margin: 1em auto;
+        position: relative;
+        background-color: #fcfcfc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .remove {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 6vw;
+        height: 6vw;
+        border-radius: 5px;
+        background-color: #F55700;
+        color: #fcfcfc;
+        margin-top: -5px;
+        margin-left: -5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1em;
+        outline: none;
+        border: none;
+    }
+
+    .item img {
+        width: 25%;
+    }
+
+    .product-details {
+        width: 35%;
+        text-align: left;
+    }
+
+    .product-details h5, .product-details p {
+        font-size: 1em;
+    }
+
+    .product-quantity {
+        width: 35%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product-quantity button {
+        background-color: #F55700;
+        height: 7.5vw;
+        width: 7.5vw;
+        color: #fcfcfc;
+        outline: none;
+        border: none;
+        font-size: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product-quantity p {
+        padding: 0 .5rem;
+    }
+
+
+    /****** Landing Page   -   Mobile ******/
+
+    .landing-page {
+        margin-top: 8vh;
+        background: url(/portfolio/howler-coffee-co/img/landing-page.jpg) center / cover no-repeat #1f1f1f;
+        background-blend-mode: overlay;
+        padding: 2rem;
+        color: hsla(0, 0%, 100%, .8);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .landing-page .container {
+        width: 85%;
+        margin: -8vh auto 0 auto;
+        text-align: center;
+    }
+
+    .landing-page h2 {
+        font-size: 4em;
+        line-height: 1;
+    }
+
+    .landing-page p {
+        font-size: 2em;
+        text-transform: uppercase;
+        margin-top: 1rem;
+        line-height: 1;
+    }
+
+    .btn-landing-page {
+        margin-top: 2rem;
+        min-width: 80%;
+        font-size: 2em;
+    }
+
+    /****** About Us   -   Mobile ******/
+    .about-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2em 0;
+    }
+    
+    .about-section .container {
+        width: 95%;
+        margin: 0 auto;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+
+    @keyframes slideUp {
+        from {
+            transform: translateY(50px);
+        }
+
+        to {
+            transform: translateY(0px);
+        }        
+    }
+
+    .about-img img {
+        width: 100%;
+    }
+
+    .about-bio h3 {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .about-bio p {
+        margin: 1rem 0;
+        
+    }
+
+    /****** Shop  -   Mobile ******/
+    /****** Shop Header -   Mobile ******/
+    .shop-header {
+        width: 100%;
+        background-color: #050505;
+        min-height: 30vh;
+        color: #fcfcfc;
+        text-align: center;
+        padding: 2em;
+    }
+
+    .shop-header .container {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .shop-header .container div {
+        width: 70%;
+        margin: 2em auto;
+        text-align: center;
+    }
+
+    .shop-header .container div p {
+        margin-top: 1em;
+    }
+
+    .shop-header img {
+        width: 50%;
+    }
+
+    /****** Shop Main -   Mobile ******/
+    .cart-popup {
+        width: 100%;
+        height: 92vh;
+        top: 8vh;
+        background-color: hsla(0, 0%, 99%, .9);
+        position: fixed;
+    }
+
+    .popup-message {
+        width: 95%;
+        left: 2.5%;
+        position: fixed;
+        min-height: 30vh;
+        text-align: center;
+        border: 3px solid #050505;
+        box-shadow: 0px 0px 8px #050505;
+        background-color: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        top: 25vh;
+        z-index: 2;
+        border-radius: 5px;
+        
+    }
+
+    .cart-popup h4 {
+        width: 70%;
+        font-size: 1.5em;
+        margin: 0 auto;
+    }
+
+    .popup-btn {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .shop-body {
+        width: 90%;
+        margin: 0 auto;
+        padding: 2em 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+
+    .product {
+        width: 90%;
+        text-align: center;
+        margin: 2em 0;
+    }
+
+    .product p {
+        font-size: 1.5em;
+    }
+
+    .product img {
+        width: 100%;
+    }
+
+    .product button {
+        margin-top: 1em;
+    }
+
+    /****** Contact   -   Mobile ******/
+    .contact-section {
+        background-color: #050505;
+        color: #fcfcfc;
+        text-align: center;
+        min-height: 40vh;
+        padding: 2em 0;
+    }
+
+    form {
+        width: 100%;
+        text-align: center;
+        margin-top: 3vh;
+        font-family: "Roboto", sans-serif;
+    }
+ 
+    form input {
+        width: 90%;
+        min-height: 5vh;
+        font-size: 1.25em;
+        margin: 10px 0;
+        border: 1px solid #c9c9c9;
+        box-shadow: 1px 1px 5px #c9c9c9;
+        border-radius: 5px;
+    }
+
+    form input:focus, textarea:focus {
+        outline: 2px solid #F55700;
+    }
+ 
+    .form {
+        padding-left: 10px;
+    }
+ 
+     textarea {
+        width: 90%;
+        min-height: 25vh;
+        font-size: 1.25em;
+        margin: 10px 0;
+        border: 1px solid #c9c9c9;
+        box-shadow: 1px 1px 5px #c9c9c9;
+        font-family: "Roboto", sans-serif;
+        border-radius: 5px;
+    }
+
+    .btn-contact {
+        min-width: 50%;
+        display: block;
+        margin: 2em auto;
+    }
+
+    /****** Footer   -   Mobile ******/
+    footer {
+        min-height: 30vh;
+        margin-top: -.1vh;
+        background-color: #050505;
+        padding: 2em 0;
+        color: #fcfcfc;
+        text-align: center;
+    }
+
+    .socials {
+        width: 30%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 2em auto;
+    }
+
+    .socials img {
+        width: 70%;
+        transition: all 0.5s ease;
+    }
+
+    .socials img:hover {
+        transform: scale(1.1);
+    }
+
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    .section {
+        min-height: 92vh;
+    }
+
+    
+
+    /****** Navigation   -   Tablet ******/
+    .logo, .shopping-cart {
+        width: 15vw;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .nav-list {
+        height: 8vh;
+        width: 70vw;
+        position: static;
+        transition: all 0.5s ease;
+        background-color: transparent;
+    }
+
+    .nav-section {
+        height: 8vh;
+        width: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .nav-section li {
+        opacity: 1;
+        
+    }
+
+    .nav-section a {
+        font-size: 1.5em;
+        color: #fcfcfc;
+    }
+
+    .nav-section a:hover {
+        color: #F55700;
+    }
+
+    /****** Shopping Cart   -   Tablet ******/
+
+    .item-counter {
+        min-width: 15px;
+        min-height: 15px;
+        font-size: .75rem;
+    }
+
+    .shopping-cart-list {
+        height: 75vh;
+        width: 50vw;
+    }
+
+    .item button {
+        width: 3.5vw;
+        height: 3.5vw;
+
+    }
+
+    .product-quantity button {
+        font-size: 2.5em;
+    }
+
+    /****** Landing Page   -   Tablet ******/
+
+    .landing-page .container {
+        width: 70%;
+    }
+
+    /****** About Us   -   Tablet ******/
+    .about-section .container {
+        width: 70%;
+    }
+
+    .about-img {
+        text-align: center;
+    }
+
+    .about-img img {
+        width: 80%;
+    }
+
+    /****** Shop  -   Tablet ******/
+    
+    /****** Shop Header -   Tablet ******/
+    .shop-header {
+        padding: 1em 0;
+    }
+
+    .shop-header .container {
+        width: 95%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .shop-header .container div {
+        width: 28%;
+        margin: 2em auto 1em auto;
+    }
+
+
+    .shop-header img {
+        width: 40%;
+    }
+
+    /****** Shop Main -   Tablet ******/
+
+
+    .popup-message {
+        width: 60%;
+        left: 20%;        
+    }
+
+    .shop-body {
+        width: 95%;
+        flex-direction: row;
+
+    }
+
+    .product {
+        width: 45%;
+    }
+
+    /****** Contact  -   Tablet ******/
+
+    .contact-section {
+        min-height: 70vh;
+    }
+
+    form input {
+        width: 70%;
+    }
+
+    textarea {
+        width: 70%;
+    }
+
+    .btn-contact {
+        min-width: 30%;
+    }
+
+    /****** Footer   -   Mobile ******/
+    .socials {
+        width: 20%;
+    }
+
+    .socials img {
+        width: 60%;
+    }    
+
+}
+
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+
+    p {
+        line-height: 1;
+    }
+
+    /****** Navigation   -   Desktop ******/
+    header {
+        justify-content: space-between;
+    }
+
+    .logo, .shopping-cart {
+        width: 15vw;
+    }
+
+    .nav-list {
+        width: 50vw;
+    }
+
+    .nav-section {
+        width: 70%;
+        margin: .5rem auto 0 auto;
+    }
+
+    .nav-section a {
+        font-size: 1.25em;
+    }
+
+    /****** Shopping Cart   -   Desktop ******/
+    .shopping-cart-list {
+        height: 90vh;
+        width: 30vw;
+    }
+
+    .item button {
+        display: none;
+    }
+
+    .item:hover button {
+        display: flex;
+    }
+
+    .item button {
+        width: 1.5vw;
+        height: 1.5vw;
+        font-size: .75em;
+
+    }
+
+    .product-quantity button {
+        font-size: 1.5em;
+        display: flex;
+    }
+
+    
+
+    
+
+    /****** Landing Page   -   Desktop ******/
+    .landing-page h2 {
+        font-size: 3.5em;
+    }
+
+    .landing-page p {
+        font-size: 1.75em;
+    }
+
+    .btn-landing-page {
+        min-width: 30%;
+        margin-top: 3rem;
+    }
+
+    /****** About Us   -   Desktop ******/    
+    .about-section .container {
+        width: 70%;
+        flex-direction: row;
+    }
+
+    .about-img {
+        width: 55%;
+    }
+
+    .about-img img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .about-bio {
+        width: 40%;
+    }
+
+    .about-img, .about-bio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    .about-bio h3 {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .about-bio p {
+        margin: 1rem 0;
+        font-size: 1.25em;
+    }
+
+    /****** Shop  -   Desktop ******/
+    /****** Shop Header -   Desktop ******/
+    .shop-header .container {
+        width: 80%;
+    }
+
+    .shop-header .container div {
+        width: 20%;
+        margin: 2em auto 1em auto;
+    }
+
+    .shop-header img {
+        width: 35%;
+    }
+
+    /****** Shop Main -   Desktop ******/
+
+    .popup-message {
+        width: 30%;
+        left: 35%;        
+    }
+
+
+    .shop-body {
+        width: 90%;
+    }
+
+    .product {
+        width: 27.5%;
+    }
+
+    .product img {
+        width: 90%;
+    }
+
+    /****** Contact -   Desktop ******/
+
+    form input {
+        width: 50%;
+    }
+
+    textarea {
+        width: 50%;
+    }
+
+    .btn-contact {
+       min-width: 20%; 
+    }
+
+    /****** Footer   -   Desktop ******/
+    .socials {
+        width: 10%;
+    }
+
+    .socials img {
+        width: 60%;
+    }
+    
+    footer p {
+        font-size: 1em;
+    }
+
+}

@@ -1,0 +1,973 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    color: #111;
+}
+
+body {
+    background-color: #fcfcfc;
+}
+
+@font-face {
+    font-family: Rapscall;
+    src: url(/portfolio/captain-pjs-bbq/font/RAPSCALL.TTF)
+}
+
+/* 
+Mobile
+*/
+
+@media only screen and (min-width: 100px) {
+    /* index page */
+        .h1{
+            text-transform: uppercase;
+            font-size: 55px;
+            font-family: "Bebas Neue", "Roboto", sans-serif;
+        }
+
+        .h2 {
+            text-transform: uppercase;
+            font-size: 45px;
+            font-family: "Bebas Neue", "Roboto", sans-serif;
+        }
+
+        .h3 {
+            text-transform: uppercase;
+            font-size: 35px;
+            font-family: "Bebas Neue", "Roboto", sans-serif;
+        }
+
+        .h4 {
+            text-transform: uppercase;
+            font-size: 25px;
+            font-family: "Bebas Neue", "Roboto", sans-serif;
+        }
+
+        .h5 {
+            text-transform: uppercase;
+            font-size: 20px;
+            font-family: "Bebas Neue", "Roboto", sans-serif;
+        }
+
+        #page-header {
+            font-size: 75px;
+            text-shadow: 2px 2px 10px #111;            
+        }
+
+        /* Navigation Menu */
+        header {
+            display: flex;
+            width: 100%;
+            height: 8vh;
+            justify-content: space-evenly;
+            flex-direction: row;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            transition: all 0.5s ease;
+            z-index: 9;
+        
+        }
+
+        .header-active {
+            background-color: #111;
+        }
+
+        .branding {
+            display: flex;
+        }
+
+        header img {
+            width: 50px;
+            margin-right: 2vw;
+            margin-left: -2vw;
+        }
+    
+
+        .sticky {
+            background-color: #111;
+            min-height: 10vh;
+            
+        }
+
+        
+        header h1 a{
+            color: #fcfcfc;
+            font-weight: 500;
+            font-size: 22px;
+            text-transform: uppercase;
+            font-family: "Rapscall", "Roboto", sans-serif;
+            letter-spacing: 3px; 
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        .nav-list {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            top: 8vh;
+            left: 0;
+            width: 100%;
+            height: 85vh;
+            background-color: rgba(43, 43, 43, .95);
+            align-items: center;
+            transform: translateX(-100%);
+            transition: all 0.5s ease-in;
+            z-index: 10;
+        }
+
+        .sticky-nav {
+            top: 10vh;
+        }
+
+        .nav-list li {
+            list-style: none;
+            opacity: 0;
+            font-size: 20px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-list a {
+            color: #fcfcfc;
+            text-decoration: none;
+            
+        }
+
+        .nav-list a:hover {
+            color:#1d51bf;
+            transition: all 0.5s ease;
+        }
+
+        .burger {
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+
+        .burger div {  
+            height: 3px;
+            margin: 5px;
+            width: 25px;
+            background-color: #fcfcfc;
+            transition: all 0.5s ease;
+        }
+
+        .nav-active {
+            transform: translateX(0%);
+        }
+
+        @keyframes navListFade {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .toggle .burger1 {
+            transform: rotate(45deg) translate(5px, 6px);
+            transition: all 0.5s ease;
+            background-color: #ff2b2b;
+        }
+
+        .toggle .burger2 {
+            opacity: 0;
+        }
+
+        .toggle .burger3 {
+            transform: rotate(-45deg) translate(5px, -6px);
+            transition: all 0.5s ease;
+            background-color: #ff2b2b;
+        }
+
+        /* landing page */
+        .landing-page {
+            background-image: url(/portfolio/captain-pjs-bbq/img/mobile-landing.jpg);
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 96vh;
+            margin-top: -8vh;
+            text-align: center;
+
+        }
+
+        .cta {
+            min-height: 96vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        .landing-page h2 {
+            color: #fcfcfc;
+            font-size: 45px;
+            letter-spacing: 4px;
+            font-weight: 600;
+            text-shadow: 3px 3px 8px #111;
+            font-family: "Bebas Neue", "Roboto", sans-serif;
+        }
+
+        .line-1 {
+            background-color: hsla(0, 100%, 100%, .5);
+            height: 1.5px;
+            width: 250px;
+            margin: 1vh auto;
+        }
+
+        .landing-page h4 {
+            color: #fcfcfc;
+            font-size: 25px;
+            font-weight: 300;
+            text-shadow: 2px 2px 10px #111;
+        }
+
+        button {
+            width: 60%;
+            height: 6vh;
+            margin: 5vh auto;
+            text-transform: uppercase;
+            font-size: 20px;
+            border-radius: 15px;
+            box-shadow: 2px 2px 10px #111;
+            color: white;
+            cursor: pointer;
+            display: block;
+        }
+
+        #button-1 {
+            background-color: hsla(216, 100%, 57.8%, .8);
+            border: 2px solid #1d51bf;
+        }
+
+        #button-1:hover {
+            background-color: #1d51bf;
+            transition: all 0.5s ease;
+        }
+
+
+        /* /landing page */
+
+        /* About selection */
+        .about {
+            width: 100%;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin-top: 100px;
+            transition: all 0.8s ease;
+        }
+
+        .about-show {
+            margin-top: 0;
+            transition: all 0.8s ease;
+        }
+
+        .about div {
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+        
+        }
+        
+        .about img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            object-position: center;
+            margin: 3vh 0;
+        }
+
+        .about p {
+            text-align: left;
+            font-size: 18px;
+            margin: 3vh; 
+        }
+
+
+
+        /* /about section */
+
+        /* Testimonial Section */
+        .test-sect {
+            width: 100%;
+            min-height: 80vh;
+            padding: 2vh 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial {
+            width: 90%;
+            margin: 2vh auto;
+            min-height: 24vh;
+            background-color: #fcfcfc;
+            text-align: center;
+            box-shadow: 2px 2px 12px #919191;
+        }
+
+        .testimonial:hover {
+            transform: scale(1.05);
+            transition: all 0.5s ease;
+        }
+
+
+        .testimonial img {
+            width: 40%;
+            margin-top: 1vh;
+        }
+
+        .testimonial h5 {
+            font-size: 20px;
+            font-weight: 500;
+            color: #1d51bf;
+            padding: 1.5vh 3vw;
+
+        }
+
+        .testimonial p {
+            font-size: 18px;
+            padding: 1.5vh 3vw;
+        }
+
+        .testimonial a {
+            text-decoration: none;
+        }
+
+        .line-2 {
+            background-color: #d9d9d9;
+            height: 2px;
+            width: 80%;
+            margin: 0vh auto;
+        }
+
+        /* /Testimonial Section */
+
+        /* Bottom CTA section */
+        .bottomcta {
+            width: 100%;
+            min-height: 30vh;
+            background-image: url(/portfolio/captain-pjs-bbq/img/footer.jpg);
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 2vh 0;
+        }
+
+        .bottomcta h2 {
+            padding: 2vh 2vh 0 2vh;
+            color: #fcfcfc;
+            text-shadow: 2px 2px 12px #111;
+        }
+
+        .bottomcta p {
+            color: #fcfcfc;
+            font-size: 22px;
+            font-weight: 500;
+            text-shadow: 2px 2px 12px #111;
+            padding: 1vh;
+        }
+
+        #button-2 {
+            background-color: hsla(0, 0%, 7%, .9);
+            box-shadow: 2px 2px 10px #111;
+            border: 2px solid #111;
+        }
+
+        #button-2:hover {
+            background-color: #111;
+            transition: all 0.5s ease;
+        }
+        /* /Bottom CTA section */
+    /* /index page */
+
+
+
+    /* Menu page */
+
+        /* Header page */
+        .page-top {
+            min-height: 30vh;
+            margin-top: -8vh;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            
+            
+        }
+
+        .menu-top {
+            background-image: url(/portfolio/captain-pjs-bbq/img/menu/menu-cover.jpg);
+            /* margin: 0; */
+        }
+
+        .page-top h2 {
+            color: rgba(252, 252, 252, 0.85);
+            margin-top: 8vh;
+            letter-spacing: 10px;
+            font-size: 60px;
+            font-family: "Rapscall", "Roboto", sans-serif;
+        }
+
+        /* .menu-top h2 {
+            margin-top: 0;
+        } */
+
+        .menu-wrapper {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        .food-menu {
+            padding: 3vh;
+        }
+
+        .food-menu h2 {
+            padding: 2vh;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        .food-menu h5 {
+            font-size: 24px;
+            margin-bottom: 2vh;
+            font-weight: 500;
+        }
+
+        .food-menu p {
+            font-size: 20px;
+            margin: -2vh 0 2vh 1vh;
+            font-weight: 400;
+            color: #595959;
+        }
+
+        .desc {
+            padding-top: -2vh;
+        }
+
+        .food-menu img {
+            width: 100%;
+            min-height: 30vh;
+            object-position: center;
+            object-fit: cover;
+            border: 8px solid #fcfcfc;
+            box-shadow: 2px 2px 10px #111;
+        }
+
+    /* /menu page */
+
+    /* catering page */
+        .catering-top {
+            background-image: url(/portfolio/captain-pjs-bbq/img/catering/catering-cover.jpg);
+        }
+
+        .catering-section img {
+            width: 95%;
+            margin: 0 auto;
+            padding: 2vh 0;
+        }
+
+        .catering-section {
+            text-align: center;
+            width: 90%;
+            margin: 0 auto;
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .catering-section p {
+            padding: 2vh;
+            text-align: left;
+        }
+
+        #button-3 {
+            background-color: #1d51bf;
+            box-shadow: 2px 2px 10px #111;
+            border: 2px solid #1d51bf;
+            margin: 2vh auto 5vh auto;
+        }
+
+        #button-3:hover {
+            background-color: hsla(218, 74%, 43%, .9);
+            transition: all 0.5s ease;
+        }
+
+    /* /catering page */
+
+
+    /* contact page */
+        .cover-top {
+            background-image: url(/portfolio/captain-pjs-bbq/img/contact/contact-cover.jpg);
+        }
+
+        form {
+            width: 100%;
+            text-align: center;
+            margin-top: 3vh;
+        }
+     
+        form input {
+            width: 90%;
+            min-height: 5vh;
+            font-size: 20px;
+            margin: 10px 0;
+            border: 1px solid #c9c9c9;
+            box-shadow: 1px 1px 5px #c9c9c9;
+        }
+     
+        .form {
+            padding-left: 10px;
+        }
+     
+         textarea {
+            width: 90%;
+            min-height: 25vh;
+            font-size: 20px;
+            margin: 10px 0;
+            border: 1px solid #c9c9c9;
+            box-shadow: 1px 1px 5px #c9c9c9;
+        }
+
+    
+    /* /contact page */
+
+    /* Footer Section */
+        footer {
+            background-color: #111;
+            width: 100%;
+            min-height: 20vh;
+            text-align: center;
+            padding: 2vh 0;
+        }
+
+        .footer-menu {
+            display: none;
+        }
+
+
+        .socials h3 {
+            color: #fcfcfc;
+        }
+
+        .line-3 {
+            background-color: #d9d9d9;
+            height: 1px;
+            width: 30%;
+            margin: 1vh auto 0 auto;
+        }
+
+        .socials img {
+            width: 40px;
+            padding: 2vh .5vh 3vh .5vh;
+        }
+
+        .socials img:hover {
+            transform: scale(1.1);
+            transition: all 0.5s ease;
+        }
+
+        footer p {
+            padding-top: 3vh;
+            color: #fcfcfc;
+            font-size: 16px;
+        }    
+    /* /Footer Section */
+
+}
+
+/*
+End
+of
+Mobile
+*/
+
+
+/* 
+Tablet
+ */
+
+@media only screen and (min-width: 768px) {
+
+    /* Navigation Menu */
+   
+    header img {
+        margin-right: 15vw;
+    }
+
+    /* Landing Page Section */
+    button {
+        width: 30%;
+    }
+
+    /* /Landing Page Section */
+
+
+  
+    /* Testimonial Section */
+    .test-sect {
+        /* background-color: #757575; */
+        min-height: 40vh;
+        flex-direction: row;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .testimonial {
+        margin: 2vh .5vh;
+        min-height: 30vh;
+        padding: 1vh;
+    }
+
+    .testimonial img {
+        width: 40%;
+        margin-top: 1vh;
+    }
+
+    .testimonial h5 {
+        font-size: 18px;
+        font-weight: 500;
+        color: #1d51bf;
+        padding: 1vh 3vw;
+
+    }
+
+    .testimonial p {
+        min-height: 0vh;
+        font-size: 16px;
+        padding: 1vh 3vw;
+    }
+
+    .line-2 {
+        background-color: #d9d9d9;
+        height: 2px;
+        width: 30%;
+        margin: 1vh auto;
+    }
+
+
+    /* /Testimonial Section */
+
+    /* Bottom CTA section */
+    .bottomcta {
+        min-height: 25vh;
+        background-attachment: fixed;
+    }
+
+
+
+    /* /Bottom CTA section */
+    /* Menu page */
+
+    .menu-wrapper {
+        width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .food-menu {
+        padding: 3vh;
+        width: 40%;
+    }
+
+    .food-menu img {
+        min-height: 28vh;
+    }
+
+    /* /menu page */
+
+    /* catering page */
+    .catering-section {
+        width: 70%;
+        min-height: 50vh;
+    }
+
+    /* /catering page */
+
+    /* contact page */
+
+    form input {
+        width: 70%;
+    }
+
+    textarea {
+        width: 70%;
+    }
+
+
+
+
+    /* /contact page */
+}
+/* 
+End
+of 
+Tablet
+ */
+
+/* 
+Desktop
+*/
+
+@media only screen and (min-width: 1025px) {
+    /* Navigation Menu */
+
+    .h1{
+        font-size: 65px;
+    }
+
+    .h2 {
+        font-size: 55px;
+
+    }
+
+    .h3 {
+        font-size: 45px;
+
+    }
+
+    .burger {
+        display: none;
+    }
+
+    menu {
+        width: 30%;
+        margin-right: -30%;
+    }
+
+    .branding {
+        margin-left: -30%;
+    }
+
+    .branding h1 a {
+        font-size: 30px;
+    }
+
+    header img {
+        margin-right: 1vw;
+    }
+
+    .nav-list {
+        position: static;
+        flex-direction: row;
+        width: 100%;
+        height: 8vh;
+        background-color: transparent;
+        transform: translateX(0%);
+        transition: none;
+    }
+
+    .nav-list li {
+        opacity: 1;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0px;
+    }
+
+    .nav-list a {
+        color: #fcfcfc;
+        text-decoration: none;
+        
+    }
+
+    #highlight a {
+        padding: 10px 40px;
+    }
+
+
+    /* landing page */
+    .landing-page {
+        background-image: url(/portfolio/captain-pjs-bbq/img/desktop-landing.jpg);
+        background-position: bottom;
+        background-size: cover;
+        width: 100%;
+        height: 95vh;
+
+    }
+
+    .landing-page h2 {
+        font-size: 65px;
+        letter-spacing: 4px;
+        
+    }
+
+    .landing-page h4 {
+        color: #fcfcfc;
+        font-size: 28px;
+        text-shadow: 2px 2px 10px #111;
+        margin-top: -5px;
+    }
+
+    button {
+        width: 20%;
+        height: 6vh;
+        margin: 5vh auto;
+        font-size: 20px;
+    }
+
+
+
+    /* /landing page */
+    /* About selection */
+    .about {
+        min-height: 70vh;
+        flex-direction: row;
+    }
+
+    .about div {
+        display: flex;
+        flex-direction: column;
+        padding: 0 5vh;
+        justify-content: center;
+       
+    }
+
+    /* Testimonial Section */
+      .testimonial {
+        margin: 2vh 2vh;
+    }
+
+    .testimonial img {
+        width: 40%;
+        margin-top: 1vh;
+    }
+
+
+    /* /Testimonial Section */
+
+    /* Menu page */
+    .menu-wrapper {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    
+    .food-menu {
+        padding: 3vh;
+        width: 20%;
+    }
+
+    .food-menu img {
+        min-height: 35vh;
+    }
+
+    
+    
+
+    /* /Menu page */
+
+    /* catering page */
+    .catering-section {
+        width: 50%;
+        min-height: 60vh;
+    }
+
+    /* /catering page */
+
+    /* contact page */
+
+        form input {
+            width: 50%;
+        }
+
+        textarea {
+            width: 50%;
+        }
+
+
+    /* /contact page */
+
+    /* Footer Section */
+    footer {
+        min-height: 30vh;
+        padding: 2vh 0;
+    }
+
+    .footer-wrapper {
+        width: 60%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .footer-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .footer-menu ul {
+        width: 45%;
+        margin: 0 auto;
+    }
+
+    .footer-menu li {
+        font-size: 16px;
+        padding: 1vh 0;
+    }
+
+    .footer-menu a {
+        color: #fcfcfc;
+        text-decoration: none;
+    }
+
+    .footer-menu a:hover {
+        color: #1d51bf;
+        transition: all 0.5s ease;
+    }
+
+    .socials {
+        width: 100%;
+    }
+
+    .socials img {
+        width: 30px;
+    }
+
+    .socials h3 {
+        margin-top: 2vh;
+        font-size: 35px;
+        letter-spacing: 2px;
+    }
+
+    .line-3 {
+        width: 20%;
+    }
+
+
+    footer p {
+        padding-top: 5vh;
+        color: #fcfcfc;
+        font-size: 16px;
+    }
+
+    
+    /* /Footer Section */
+
+}
+
+/*
+
+End
+of
+Desktop
+*/
