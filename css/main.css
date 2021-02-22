@@ -268,6 +268,11 @@ p {
         margin-top: 1rem;
     }
 
+    .btn-about {
+        margin-top: 2rem;
+        font-size: 1.75em;
+    }
+
     /*   Resume - Mobile     */
 
 
@@ -455,6 +460,10 @@ p {
         margin-top: 0;
     }
 
+    .btn-about {
+        font-size: 1.75em;
+    }
+
     /*   Portfolio - Tablet     */
     .portfolio-item {
         width: 90%;
@@ -571,6 +580,10 @@ p {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    .btn-about {
+        font-size: 1.5em;
     }
 
     /*   Portfolio - Desktop     */
