@@ -14,7 +14,11 @@ class Portfolio {
 const greenBayGuy = new Portfolio('/img/portfolio/img/the-green-bay-guy.jpg',
 'Lambeau Field during a snowy night game', 
 'The Green Bay Guy', 
-`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`, 
+`The Green Bay Guy is a side project of mine. I started this side project back in 2017 that has grown far beyond what I had imagined when I started it. Coincidentally, this side project is what introduced me to an interest and passion in web development. In the years since I’ve started this project, I’ve built and rebuilt this website numerous times. 
+<br>
+<br>
+Recently, I was excited to add a search feature in my local’s guide, podcast, and recipe sections. 
+`, 
 `https://github.com/benbiederman/the-green-bay-guy`, 
 `http://thegreenbayguy.com/`
 );
@@ -22,7 +26,11 @@ const greenBayGuy = new Portfolio('/img/portfolio/img/the-green-bay-guy.jpg',
 const howlerCoffee = new Portfolio('img/portfolio/img/howler-coffee.jpg',
 'a bag of Howler Coffee - Bucksaw Blend',  
 'Howler Coffee Co', 
-`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`, 
+`To help build up my portfolio, I decided to find a local website and rebuild it. I wanted to see how I could design and build a website compared to their current one. As part of this challenge, I wanted to find a website that had an online shop, so I could build a feature that I hadn’t built yet – a shopping cart. The company I ended up choosing was (I’m sure you’ve already guessed it by the large heading and photo) Howler Coffee Co.
+<br>
+<br>
+This was a fun website for me to build since I’m a big fan of Howler Coffee Co and their coffee. I order it quite regularly and drank plenty of it while building out this website. If you’d like to compare the websites yourself, or order some good coffee, you can find their website <a href="https://www.howlerbeans.com/" target="_blank">here</a>.
+`, 
 `https://github.com/benbiederman/howler-coffee-co`, 
 `/portfolio/howler-coffee-co/home.html`
 );
@@ -30,8 +38,7 @@ const howlerCoffee = new Portfolio('img/portfolio/img/howler-coffee.jpg',
 const captainPJsBBQ = new Portfolio('img/portfolio/img/captain-pjs.jpg', 
 'Captain PJs BBQ ribs',
 'Captain PJs BBQ', 
-`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <br> when an unknown printer took a galley of type and scrambled it to make a type specimen book.`, 
-`https://github.com/benbiederman/howler-coffee-co`,
+`Captain PJ’s BBQ is the business of a former college professor’s husband. This is one of the early websites I built when I started really learning web development. I offered to build this website since their current website wasn’t mobile friendly. It was a rewarding experience because I was able to work with my former professor and get her thoughts and feedback on the website along the way. It allowed me to somewhat get the experience of what it was like working with real clients. `,
 `portfolio/captain-pjs-bbq/home.html`
 );
 

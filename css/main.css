@@ -268,12 +268,22 @@ p {
         margin-top: 1rem;
     }
 
+    .about-bio a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #045f63;
+    }
+
+
     .btn-about {
         margin-top: 2rem;
         font-size: 1.75em;
     }
 
-    /*   Resume - Mobile     */
+    /*   Blog - Mobile     */
+   
+
+
 
 
     /*   Portfolio - Mobile     */
@@ -308,6 +318,12 @@ p {
         font-size: 2rem;
     }
 
+    .portfolio-info a {
+        color: #045f63;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
     .portfolio-info p {
         text-align: left;
     }
@@ -322,11 +338,6 @@ p {
         font-size: 1.5em;
         min-width: 45%;
     }
-
-    
-
-   
-
 
 
     /*   Footer - Mobile     */
@@ -463,6 +474,9 @@ p {
     .btn-about {
         font-size: 1.75em;
     }
+
+    /*   Blog - Tablet     */
+    
 
     /*   Portfolio - Tablet     */
     .portfolio-item {
