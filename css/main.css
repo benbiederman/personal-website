@@ -287,13 +287,13 @@ p {
 
 
     /*   Portfolio - Mobile     */
-    .portfolio-section {
+    .portfolio-section, .blog-section {
         background: url(/img/texture.jpg) left / contain repeat #95B0B2;
         padding: 1rem 0;
         background-blend-mode: overlay;
     }
 
-    .portfolio-item {
+    .portfolio-item, .blog {
         width: 90%;
         padding-bottom: 2.5%;
         margin: 1rem auto;
@@ -304,17 +304,17 @@ p {
     }
 
 
-    .portfolio-img img {
+    .portfolio-img img, .blog-img img {
         width: 95%;
         margin: 2.5% 0;
     }
 
-    .portfolio-info {
+    .portfolio-info, .blog-info {
         width: 90%;
         margin: 0 auto;
     }
 
-    .portfolio-info h3 {
+    .portfolio-info h3, .blog-info h3 {
         font-size: 2rem;
     }
 
@@ -324,17 +324,17 @@ p {
         text-decoration: none;
     }
 
-    .portfolio-info p {
+    .portfolio-info p, .blog-info p {
         text-align: left;
     }
 
-    .portfolio-cta {
+    .portfolio-cta, .blog-cta {
         display: flex;
         justify-content: space-around;
         margin-top: 2rem;
     }
 
-    .btn-portfolio {
+    .btn-portfolio, .btn-blog {
         font-size: 1.5em;
         min-width: 45%;
     }
@@ -479,7 +479,7 @@ p {
     
 
     /*   Portfolio - Tablet     */
-    .portfolio-item {
+    .portfolio-item, .blog {
         width: 90%;
         display: flex;
         padding: 0;
@@ -502,12 +502,12 @@ p {
         border-radius: 0 5px 5px 0; 
     }
 
-    .portfolio-img {
+    .portfolio-img, .blog-img {
         width: 50%;
         min-height: 30vh;
     }
 
-    .portfolio-img img {
+    .portfolio-img img, .blog-img img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -516,7 +516,7 @@ p {
         
     }
 
-    .portfolio-info {
+    .portfolio-info, .blog-info {
         width: 40%;
         display: flex;
         flex-direction: column;
@@ -524,12 +524,12 @@ p {
         padding: 1em 0;
     }
 
-    .portfolio-info p {
+    .portfolio-info p, .blog-info p {
         margin-top: 1em;
         flex: 1;
     }
 
-    .btn-portfolio {
+    .btn-portfolio, .btn-blog {
         font-size: 1.5em;
         min-width: 45%;
     }
@@ -601,17 +601,17 @@ p {
     }
 
     /*   Portfolio - Desktop     */
-    .portfolio-item {
+    .portfolio-item, .blog {
         width: 70%;
         display: flex;
         padding: 0;
     }
 
-    .portfolio-info h3 {
+    .portfolio-info h3, .blog-info h3 {
         font-size: 2.5em;
     }
 
-    .btn-portfolio {
+    .btn-portfolio, .btn-blog {
         font-size: 1.5em;
         min-width: 45%;
     }

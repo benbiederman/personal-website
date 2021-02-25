@@ -1,4 +1,4 @@
-const portfolioSelection = document.querySelector('.portfolio-section');
+const portfolioSection = document.querySelector('.portfolio-section');
 
 class Portfolio {
     constructor(image, description, name, info, codeLink, websiteLink){
@@ -11,7 +11,7 @@ class Portfolio {
     }
 }
 
-const greenBayGuy = new Portfolio('/img/portfolio/img/the-green-bay-guy.jpg',
+const greenBayGuy = new Portfolio('/img/portfolio/the-green-bay-guy.jpg',
 'Lambeau Field during a snowy night game', 
 'The Green Bay Guy', 
 `The Green Bay Guy is a side project of mine. I started this side project back in 2017 that has grown far beyond what I had imagined when I started it. Coincidentally, this side project is what introduced me to an interest and passion in web development. In the years since I’ve started this project, I’ve built and rebuilt this website numerous times. 
@@ -23,7 +23,7 @@ Recently, I was excited to add a search feature in my local’s guide, podcast, 
 `http://thegreenbayguy.com/`
 );
 
-const howlerCoffee = new Portfolio('img/portfolio/img/howler-coffee.jpg',
+const howlerCoffee = new Portfolio('/img/portfolio/howler-coffee.jpg',
 'a bag of Howler Coffee - Bucksaw Blend',  
 'Howler Coffee Co', 
 `To help build up my portfolio, I decided to find a local website and rebuild it. I wanted to see how I could design and build a website compared to their current one. As part of this challenge, I wanted to find a website that had an online shop, so I could build a feature that I hadn’t built yet – a shopping cart. The company I ended up choosing was (I’m sure you’ve already guessed it by the large heading and photo) Howler Coffee Co.
@@ -35,7 +35,7 @@ This was a fun website for me to build since I’m a big fan of Howler Coffee Co
 `/portfolio/howler-coffee-co/home.html`
 );
 
-const captainPJsBBQ = new Portfolio('img/portfolio/img/captain-pjs.jpg', 
+const captainPJsBBQ = new Portfolio('/img/portfolio/captain-pjs.jpg', 
 'Captain PJs BBQ ribs',
 'Captain PJs BBQ', 
 `Captain PJ’s BBQ is the business of a former college professor’s husband. This is one of the early websites I built when I started really learning web development. I offered to build this website since their current website wasn’t mobile friendly. It was a rewarding experience because I was able to work with my former professor and get her thoughts and feedback on the website along the way. It allowed me to somewhat get the experience of what it was like working with real clients. `,
@@ -57,7 +57,7 @@ function createPortfolioItem(item) {
         newItem.classList.add('right');
     }
     newItem.tabIndex = 0;
-    portfolioSelection.appendChild(newItem);
+    portfolioSection.appendChild(newItem);
 
     const newImg = document.createElement('div');
     newImg.classList.add('portfolio-img')
