@@ -246,6 +246,17 @@ p {
         margin: 2rem auto;
         text-align: center;
         outline: none;
+        opacity: 0;
+        transition: all 1s ease;
+    }
+
+    @keyframes slide {
+        from {
+            transform: translateY(50px);
+        }
+        to {
+            transform: translateY(0px);
+        }
     }
 
     .about-img img {

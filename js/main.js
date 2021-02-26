@@ -12,3 +12,11 @@ downloadResume.addEventListener('click', () => {
     window.open('/doc/ben-biederman-resume.pdf');
 })
 
+const aboutSection = document.querySelector('.about-section');
+
+document.addEventListener('scroll', () => {
+    if(window.scrollY >= 500) {
+        aboutSection.style.opacity = '1';
+        aboutSection.style.animation = `slide 0.5s`
+    }
+})
