@@ -9,9 +9,14 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
 }
 
-p {
+p, figcaption {
     font-family: "Roboto", sans-serif;
 }
+
+figcaption {
+    padding-bottom: 2rem;
+}
+
 
 .flex-row {
     display: flex;
@@ -339,6 +344,11 @@ p {
         padding: 1rem 0;
     }
 
+    .in-blog-img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
 
     /*   Portfolio - Mobile     */
     .portfolio-section, .blog-section {
@@ -549,6 +559,10 @@ p {
 
     .blog-about img {
         width: 80%;
+    }
+
+    .in-blog-img {
+        width: 60%;
     }
     
 

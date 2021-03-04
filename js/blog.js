@@ -11,7 +11,7 @@ class Portfolio {
     }
 }
 
-const greenBayGuy = new Portfolio('/img/blog/welcome.jpg',
+const introduction = new Portfolio('/img/blog/welcome.jpg',
 `Spray paint saying 123... Let's Go!`, 
 'A blog! I guess?', 
 '<time datetime="2021/02/26">02/26/2021</time>',
@@ -19,8 +19,16 @@ const greenBayGuy = new Portfolio('/img/blog/welcome.jpg',
 `blog/welcome.html`
 );
 
+const projectPokedex = new Portfolio('/img/blog/pokedex.jpg',
+`Pikachu wearing a detective hat`, 
+'Project: Pokedex', 
+'<time datetime="2021/03/04">03/04/2021</time>',
+`I love nostalgia. There is just something so great about reminiscing on our childhood and what we loved as kids. Recently, my friend Tom and I have been having nostalgia days. During these nostalgia days, we’ll get together and enjoy some of the things we grew up loving: unhealthy food, late 90s / early 2000s TV shows, and Pokemon – a lot of Pokemon.`,  
+`blog/project-pokedex.html`
+);
 
-let blogItems = [greenBayGuy];
+
+let blogItems = [projectPokedex, introduction,];
 
 for(let i = 0; i < blogItems.length; i++){
     createPortfolioItem(blogItems[i]);
