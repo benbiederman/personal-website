@@ -27,8 +27,16 @@ const projectPokedex = new Portfolio('/img/blog/pokedex.jpg',
 `blog/project-pokedex.html`
 );
 
+const failure = new Portfolio('/img/blog/failure-preview.jpg',
+`Solace Skate Co skateboard on a ledge`, 
+'Failure', 
+'<time datetime="2021/03/18">03/18/2021</time>',
+`Failure is such a funny thing. It seems we do all we can to avoid failure, even if that means holding off on dreams or aspirations. We get stuck into this rut of doing something day in and day out that doesn’t seem to fit our dreams and aspirations because we’re too scared to fail. In fact, for a lot of us, our brain will convince us whatever we set out to do is going to fail. We worry that if we fail, we’re going to be humiliated.`,  
+`blog/failure.html`
+);
 
-let blogItems = [projectPokedex, introduction,];
+
+let blogItems = [failure, projectPokedex, introduction,];
 
 for(let i = 0; i < blogItems.length; i++){
     createPortfolioItem(blogItems[i]);

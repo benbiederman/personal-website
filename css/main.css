@@ -564,6 +564,10 @@ figcaption {
     .in-blog-img {
         width: 60%;
     }
+
+    .in-blog-img {
+        width: 60%;
+    }
     
 
     /*   Portfolio - Tablet     */
@@ -690,7 +694,7 @@ figcaption {
 
     /*   Blog - Desktop     */
     .blog-post-section {
-        width: 60%;
+        width: 70%;
     }
     .blog-post-section img {
         width: 60%;
