@@ -35,6 +35,14 @@ This was a fun website for me to build since I’m a big fan of Howler Coffee Co
 `/portfolio/howler-coffee-co/home.html`
 );
 
+const pokedex = new Portfolio('/img/portfolio/pokedex.jpg', 
+'cartoon version a Pokedex',
+'Pokedex', 
+`# `,
+'https://github.com/benbiederman/pokedex',
+`portfolio/pokedex/home.html`
+);
+
 const captainPJsBBQ = new Portfolio('/img/portfolio/captain-pjs.jpg', 
 'Captain PJs BBQ ribs',
 'Captain PJs BBQ', 
@@ -43,7 +51,7 @@ const captainPJsBBQ = new Portfolio('/img/portfolio/captain-pjs.jpg',
 `portfolio/captain-pjs-bbq/home.html`
 );
 
-let portfolioItems = [greenBayGuy, howlerCoffee, captainPJsBBQ];
+let portfolioItems = [greenBayGuy, pokedex, howlerCoffee, captainPJsBBQ];
 
 for(let i = 0; i < portfolioItems.length; i++){
     createPortfolioItem(portfolioItems[i]);
@@ -98,7 +106,7 @@ function createPortfolioItem(item) {
     const primaryBtn = document.createElement('button');
     primaryBtn.classList.add('btn-primary');
     primaryBtn.classList.add('btn-portfolio');
-    primaryBtn.textContent = 'View Website';
+    primaryBtn.textContent = 'View Project';
     itemBtns.appendChild(primaryBtn);
 
     primaryBtn.addEventListener('click', () => {
