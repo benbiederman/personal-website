@@ -38,7 +38,11 @@ This was a fun website for me to build since I’m a big fan of Howler Coffee Co
 const pokedex = new Portfolio('/img/portfolio/pokedex.jpg', 
 'cartoon version a Pokedex',
 'Pokedex', 
-`# `,
+`This is a project my 10-year-old self would really be proud about. What better way to use my knowledge in HTML, CSS, and JavaScript than to build a Pokedex to find any information I need to know about a Pokémon at any given time. Along with that, to create a Pokedex monitoring my progress of where I am at on my journey to Catch ‘Em All! 
+<br>
+<br>
+For the main Pokedex, I wanted to make it feel like it was styled in the era that I grew up playing Pokémon. I used all the original artwork from the cards and chose a more pixelated font to capture that nostalgia of when the game first came out. This was a really fun project. 
+ `,
 'https://github.com/benbiederman/pokedex',
 `portfolio/pokedex/home.html`
 );
