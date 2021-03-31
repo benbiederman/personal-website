@@ -51,7 +51,7 @@ const captainPJsBBQ = new Portfolio('/img/portfolio/captain-pjs.jpg',
 'Captain PJs BBQ ribs',
 'Captain PJs BBQ', 
 `Captain PJ’s BBQ is the business of a former college professor’s husband. This is one of the first websites I've built for someone other than myself. I offered to build this website since their current website wasn’t mobile friendly. It was a rewarding experience because I was able to work with my former professor and get her thoughts and feedback on the website along the way. It allowed me to somewhat get the experience of what it was like working with real clients. `,
-'https://github.com/benbiederman/captain-pjs-bbq',
+'https://github.com/benbiederman/CaptainPJs',
 `portfolio/captain-pjs-bbq/home.html`
 );
 
