@@ -35,8 +35,16 @@ const failure = new Portfolio('/img/blog/failure-preview.jpg',
 `blog/failure.html`
 );
 
+const q12021 = new Portfolio('/img/blog/2021.25.jpg',
+`Laptop with CSS on screen`, 
+'2021.25', 
+'<time datetime="2021/04/01">04/01/2021</time>',
+`Wow! We’re already a quarter of the way through 2021. It’s unreal how quickly time seems to be going the older I get. Anyway, I wanted to give a brief update as to what I’ve been up to for the first three months of this year. I figured doing one of these updates every quarter would be a good way to monitor my progress and see that I’m on the right path to reach the goals I set out at the beginning of the year.`,  
+`blog/2021.25.html`
+);
 
-let blogItems = [failure, projectPokedex, introduction,];
+
+let blogItems = [q12021, failure, projectPokedex, introduction,];
 
 for(let i = 0; i < blogItems.length; i++){
     createPortfolioItem(blogItems[i]);

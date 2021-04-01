@@ -321,6 +321,12 @@ figcaption {
         padding: 1rem 0;
     }
 
+    .blog-post-section h6 {
+        font-size: 2em;
+        text-align: center;
+        margin: 1rem auto -1rem auto;
+    }
+
     .blog-about {
         min-height: 30vh;
         width: 90%;
