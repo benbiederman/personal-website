@@ -47,15 +47,44 @@ For the main Pokedex, I wanted to make it feel like it was styled in the era tha
 `portfolio/pokedex/home.html`
 );
 
-const captainPJsBBQ = new Portfolio('/img/portfolio/captain-pjs.jpg', 
-'Captain PJs BBQ ribs',
-'Captain PJs BBQ', 
-`Captain PJ’s BBQ is the business of a former college professor’s husband. This is one of the first websites I've built for someone other than myself. I offered to build this website since their current website wasn’t mobile friendly. It was a rewarding experience because I was able to work with my former professor and get her thoughts and feedback on the website along the way. It allowed me to somewhat get the experience of what it was like working with real clients. `,
-'https://github.com/benbiederman/CaptainPJs',
-`portfolio/captain-pjs-bbq/home.html`
+const pokedexAPI = new Portfolio('/img/portfolio/api-pokedex.jpg',
+'Pokeball with Pokemon cards scattered',
+'Pokedex (API)', 
+`This project was inspired by the other Pokedex that I created, however in this one I wanted to use the information provided through PokeAPI. This project was built using HTML, CSS, and JavaScript. Unlike my initial Pokedex, I wanted this one to feel more modern and styled rather than the 90’s style my first one was built with. 
+<br>
+<br>
+This was a really fun project to build, there’s nothing better than a heavy dose of nostalgia while building a project. This may be a project that I come back to again in the future to build it with more features and possibly more information for each Pokemon.`,
+'https://github.com/benbiederman/pokedexAPI',
+'portfolio/pokedex-api/home.html'
 );
 
-let portfolioItems = [greenBayGuy, pokedex, howlerCoffee, captainPJsBBQ];
+const findAPhoto = new Portfolio('/img/portfolio/find-a-photo.jpg',
+'Collage of photos',
+'Find-a-Photo', 
+`As an avid user of Pexels, once I learned they had an API you could use for projects, I thought it’d be a fun way to learn about APIs. I decided to build a find-a-photo app to be able to find any photos I wish without using their website. 
+<br>
+<br>
+This website was built using HTML, CSS, and JavaScript. It was a fun project that inspired me to build a Pokedex using an API as well.   
+`,
+'https://github.com/benbiederman/pokedexAPI',
+'portfolio/find-a-photo/home.html'
+);
+
+const pokebrary = new Portfolio('/img/portfolio/pokemon-library.jpg',
+'Collection of Pokemon Cards',
+'Pokemon Library', 
+`This project was built during my path through The Odin Project. We were given the instructions of building a library website where you could add, remove, and toggle the status of something in your library. I decided to build one to document the cards in a Pokémon collection instead of my actual book library. 
+<br>
+<br>
+This may be one of those projects I come back to at a later date and make a better version of it as I think it could be something practical to have in the future. I think having the ability to know where your inventory is at when building decks, what’s in use or what’s available could be a really good thing to have or know.   
+`,
+'https://github.com/benbiederman/pokemon-library',
+'portfolio/pokemon-library/home.html'
+);
+
+
+
+let portfolioItems = [pokedexAPI, findAPhoto, pokedex, greenBayGuy, pokebrary, howlerCoffee];
 
 for(let i = 0; i < portfolioItems.length; i++){
     createPortfolioItem(portfolioItems[i]);
