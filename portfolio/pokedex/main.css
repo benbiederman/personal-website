@@ -1,0 +1,446 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Anton", sans-serif;
+}
+
+p {
+    font-family: "Lato", sans-serif;
+}
+
+@media only screen and (min-width: 100px) {
+    header, footer {
+        min-height: 8vh;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer {
+        padding: 3vh 5vw;
+        color: #949494;
+        text-align: center;
+        font-size: .75em;
+    }
+
+    .pokedex-btn, .progress-btn {
+        width: 49vw;
+        height: 3.5rem;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        font-family: "Anton", sans-serif;
+        background-color: #949494;
+        color: #fcfcfc;
+        text-shadow: 0px 0px 5px #161616;
+    }
+
+    .pokedex-btn {
+        border-radius: 5px 0 0 5px;
+    }
+
+    .progress-btn {
+        border-radius: 0 5px 5px 0;
+    }
+
+    .btn-active {
+        background-color: #505050;
+        border: 2px solid #363636;
+        color: #ececec;
+        border-style: inset;
+    }
+
+    .workspace {
+        min-height: 84vh;
+        position: relative;
+    }
+
+    /* Pokedex */
+    .pokedex, .progress {
+        background-color: #fcfcfc;
+        padding: 2vh 0;
+    }
+
+    .pokedex {
+        background: url(/img/texture.jpg) center/cover;
+        background-blend-mode: overlay;
+        display: block;
+        min-height: 84vh;
+    }
+
+    .pokedex form {
+        width: 90%;
+        margin: 0vh auto 2vh auto;
+        position: relative;
+    }
+
+    .pokedex input {
+        width: 100%;
+        height: 2em;
+        border-radius: 5px;
+        border: 2px solid #aaaaaa;
+        padding: 0 2vw;
+        font-size: 1.25em;
+    }
+
+    .search-btn {
+        min-width: 15%;
+        height: 2em;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 0 5px 5px 0;
+        border: 2px solid #aaaaaa;
+        background-color: transparent;
+        border-left: none;
+        font-size: 1.25em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .search-btn img {
+        height: 1.5em;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .pokedex-screen {
+        width: 90%;
+        height: 70vh;
+        margin: 0 auto;
+        background-color: white;
+        border: 2px solid #dddddd;
+        border-radius: 5px;
+        overflow-y: scroll;
+        box-shadow: 0px 0px 8px #dddddd;
+        text-align: center;
+        position: relative;
+        padding-bottom: 1vh;
+    }
+
+    .results-header {
+        min-height: 8vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 2px dashed #505050;
+        position: sticky;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+    }
+
+    .results {
+        padding: 2vh 0;
+    }
+
+    .results li {
+        font-family: "Lato", sans-serif;
+        margin: 1.5vh 0;
+        font-size: 1.25em;
+        text-transform: capitalize;
+        cursor: pointer;
+        padding: .5vh 0;
+    }
+
+    .pokedex-header {
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1vh;
+        margin-top: 1vh;
+    }
+
+    .game-status, .pokemon-number, .pokemon-status {
+        width: 30%;
+        display: flex;
+        align-items: center;
+    }
+
+    .pokemon-number {
+        justify-content: center;
+    }
+
+    .pokemon-status {
+        justify-content: flex-end;
+    }
+
+    .game-status {
+        justify-content: flex-start;
+    }
+
+    .pokemon-red, .pokemon-blue, .pokemon-yellow {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 5px #949494;
+        margin: 0 .5vw;
+    }
+
+    .pokemon-red {
+        background-color: #aaaaaa;
+    }
+
+    .pokemon-blue {
+        background-color: blue;
+    }
+
+    .pokemon-yellow {
+        background-color: yellow;
+    }
+
+    .pokemon-status img {
+        height: 30px;
+        margin: 0 .5vw;
+    }
+
+    .pokemon-information {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .pokemon-information img{
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .pokemon-information h2, .results-header h3 {
+        font-size: 1.75em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .pokemon-information p {
+        margin: 1vh 0;
+        padding: 0 2vw;
+    }
+
+    .pokemon-evolution {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 5vh;
+
+    }
+
+    .evolution  {
+        width: auto;
+        text-align: center;
+    }
+
+    .evolution img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .evolution p {
+        text-transform: capitalize;
+    }
+
+    /* Progress */
+    .progress {
+        overflow-y: scroll;
+        display: none;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        height: 84vh;
+        padding: 0;
+        position: relative;
+    }
+
+    .progress-header {
+        width: 100%;
+        background-color: #a0a0a0;
+        position: sticky;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 4vh;
+    }
+
+    .pokemon {
+        width: 30%;
+        text-align: center;
+        background-color: #f5f5f5;
+        padding-top: 1vh;
+        margin: 1.5% 0;
+        box-shadow: 0px 0px 8px #d1d1d1;
+    }
+
+    .pokemon-caught {
+        background-color: #f4e4bc;
+    }
+
+    .pokemon-caught .progress-status button {
+        background-color: #f4e4bc;
+        border: 1px solid #edd290;
+    }
+
+    .pokemon-caught .progress-status button:hover {
+        background-color: #edd290;
+    }
+
+    .pokemon h3 {
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        font-size: 1em;
+    }
+
+    .pokemon img {
+        width: 65%;
+        cursor: pointer;
+    }
+
+    .progress-status {
+        display: flex;
+        margin-top: 2vh;
+    }
+
+    .progress-status button {
+        border: 1px solid #d6d5d5;
+        background-color: #f5f5f5;
+        cursor: pointer;
+        transition: background 0.5s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .progress-status button:hover {
+        background-color: #d6d5d5;
+        
+    }
+
+
+    .progress-status button img {
+        width: 35%;
+        padding: .5vh 0;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    /* Pokedex */
+    
+    .pokedex form {
+        width: 60%;
+    }
+
+    .search-btn img {
+        height: 1em;
+    }
+
+
+    .pokedex-screen {
+        width: 60%;
+    }
+
+
+    .game-status, .pokemon-number, .pokemon-status {
+        width: 25%;
+    }
+
+    .pokemon-information {
+        width: 85%;
+    }
+
+    .pokemon-information h2 {
+        margin-top: 1vh;
+    }
+
+    .evolution img {
+        width: 40%;
+    }
+
+    /* Progress */
+    .pokemon {
+        width: 22%;
+        margin: 1% 0;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+    .pokedex-btn, .progress-btn {
+        display: none;
+    }
+
+    .workspace {
+        display: flex;
+    }
+
+    /* Pokedex */
+    .pokedex {
+        width: 55%;
+        display: block;
+    }
+
+    .progress {
+        width: 45%;
+        height: 84vh;
+        overflow-y: scroll;
+        display: flex;
+        padding: 0;
+    }
+
+    .pokedex form {
+        width: 60%;
+    }
+
+    .pokedex input {
+        padding: 0 .75vw;
+        outline: none;
+    }
+
+    .pokedex-screen {
+        width: 60%;
+    }
+
+    .pokedex-header {
+        width: 90%;
+    }
+
+    .game-status, .pokemon-number, .pokemon-status {
+        width: 20%;
+    }
+
+    .pokemon-status img {
+        margin: 0 .2vw;
+    }
+
+    .pokemon-red, .pokemon-blue, .pokemon-yellow {
+        width: 15px;
+        height: 15px;
+        margin: 0 .2vw;
+    }
+
+    .pokemon-status img {
+        height: 20px;
+    }
+
+    .pokemon-information {
+        width: 80%;
+    }
+
+    .pokemon-information img {
+        width: 80%;
+    }
+
+    .progress-status button img {
+        padding: 1vh 0;
+    }
+}

@@ -38,24 +38,24 @@ This was a fun website for me to build since I’m a big fan of Howler Coffee Co
 const pokedex = new Portfolio('/img/portfolio/pokedex.jpg', 
 'cartoon version a Pokedex',
 'Pokedex', 
-`This is a project my 10-year-old self would really be proud about. What better way to use my knowledge in HTML, CSS, and JavaScript than to build a Pokedex to find any information I need to know about a Pokémon at any given time. Along with that, to create a Pokedex monitoring my progress of where I am at on my journey to Catch ‘Em All! 
+`This is a project my 10-year-old self would be really proud of. The idea for this project stemmed from the frustrations in playing Pokémon Red, Pokémon Blue, or Pokémon Yellow as a kid. In the game, you would encounter new/different Pokémon and could never remember if you had already caught them or not. Recently, I started playing the game again to enjoy some nostalgia and found myself with the same frustrations.
 <br>
 <br>
-For the main Pokedex, I wanted to make it feel like it was styled in the era that I grew up playing Pokémon. I used all the original artwork from the cards and chose a more pixelated font to capture that nostalgia of when the game first came out. This was a really fun project. 
+I decided to build this project to help me monitor my progress in the game. It allows me to update what Pokémon I’ve seen and caught along the way. That way, while playing the game, I can reference to it anytime I encounter a Pokémon I’m not quite sure if I have or not. It was somewhat a silly project – but a very useful one for me!
  `,
-'https://github.com/benbiederman/pokedex',
+'https://github.com/benbiederman/pokemon-game-tracker',
 `portfolio/pokedex/home.html`
 );
 
-const pokedexAPI = new Portfolio('/img/portfolio/api-pokedex.jpg',
+const pokemonTCG = new Portfolio('/img/portfolio/api-pokedex.jpg',
 'Pokeball with Pokemon cards scattered',
-'Pokedex (API)', 
-`This project was inspired by the other Pokedex that I created, however in this one I wanted to use the information provided through PokeAPI. This project was built using HTML, CSS, and JavaScript. Unlike my initial Pokedex, I wanted this one to feel more modern and styled rather than the 90’s style my first one was built with. 
+'Pokemon TCG', 
+`Recently I stumbled upon an API based around Pokémon Trading Card Game. Since I’ve been on a nostalgia kick lately, I decided I’d make an app where I can search for any Pokémon and find every card made of that Pokémon using the data from the API. I also decided I’d add a Shop Now button to allow people to be able to look up the card on eBay if they’d like to buy it.
 <br>
 <br>
-This was a really fun project to build, there’s nothing better than a heavy dose of nostalgia while building a project. This may be a project that I come back to again in the future to build it with more features and possibly more information for each Pokemon.`,
-'https://github.com/benbiederman/pokedexAPI',
-'portfolio/pokedex-api/home.html'
+This was a really fun project to build. There’s nothing better than a heavy dose of nostalgia while building a project. I’ve found myself browsing all the card arts from over the years, it was cool to have it all in one centralized location. `,
+'https://github.com/benbiederman/pokemon-tcg',
+'portfolio/pokemon-tcg-api/home.html'
 );
 
 const findAPhoto = new Portfolio('/img/portfolio/find-a-photo.jpg',
@@ -70,21 +70,9 @@ This website was built using HTML, CSS, and JavaScript. It was a fun project tha
 'portfolio/find-a-photo/home.html'
 );
 
-const pokebrary = new Portfolio('/img/portfolio/pokemon-library.jpg',
-'Collection of Pokemon Cards',
-'Pokemon Library', 
-`This project was built during my path through The Odin Project. We were given the instructions of building a library website where you could add, remove, and toggle the status of something in your library. I decided to build one to document the cards in a Pokémon collection instead of my actual book library. 
-<br>
-<br>
-This may be one of those projects I come back to at a later date and make a better version of it as I think it could be something practical to have in the future. I think having the ability to know where your inventory is at when building decks, what’s in use or what’s available could be a really good thing to have or know.   
-`,
-'https://github.com/benbiederman/pokemon-library',
-'portfolio/pokemon-library/home.html'
-);
 
 
-
-let portfolioItems = [pokedexAPI, findAPhoto, pokedex, greenBayGuy, pokebrary, howlerCoffee];
+let portfolioItems = [pokemonTCG, findAPhoto, pokedex, greenBayGuy, howlerCoffee];
 
 for(let i = 0; i < portfolioItems.length; i++){
     createPortfolioItem(portfolioItems[i]);
